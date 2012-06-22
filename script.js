@@ -148,7 +148,7 @@ $(document).ready(function(){
   $(window).resize(function(){
     resizeBackgroundImage();
   });
-  $.getJSON("http://api.meetup.com/2/events?status=upcoming&_=1340331595000&order=time&group_urlname=secrethandshake&desc=false&offset=0&format=json&page=1&fields=&sig_id=11518245&sig=842ec88019c16dae46ccc7e01ff55a11aae99ad9", function(data){                                  
+  $.getJSON("http://api.meetup.com/2/events?status=upcoming&_=1340331595000&order=time&group_urlname=secrethandshake&desc=false&offset=0&format=json&page=1&fields=&sig_id=11518245&sig=842ec88019c16dae46ccc7e01ff55a11aae99ad9&callback=?", function(data){                                  
     var event = data.results[0],
         time = new Date(event.time).format("h:MM TT"),
         date = new Date(event.time).format("dddd, mmmm dS, yyyy"),
