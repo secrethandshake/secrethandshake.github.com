@@ -1,5 +1,3 @@
-$(document).on("load", ".background", function(){ console.log('Loaded!'); $(this).fadeIn(); });
-
 /*
  * Date Format 1.2.3
  * (c) 2007-2009 Steven Levithan <stevenlevithan.com>
@@ -146,6 +144,8 @@ function resizeBackgroundImage() {
 }
 
 $(document).ready(function(){
+  $('.background').fadeIn();
+  $(document).on("load", ".background", function(){ $(this).fadeIn(); });
   resizeBackgroundImage();
   $(window).resize(function(){
     resizeBackgroundImage();
