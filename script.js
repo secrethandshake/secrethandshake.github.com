@@ -162,4 +162,4 @@ $(document).ready(function(){
   });
 });
 
-$(".background").bind("load", function () { $(this).fadeIn(); });
+$(".background").bind("load", function () { console.log('Loaded!'); $(this).fadeIn(); });
