@@ -17,10 +17,10 @@ h2 {
 
 .nav {
   background: #111;
-  overflow: hidden;
   clear: both;
   text-align: center;
-  height: 48px;
+  height: 54px;
+  overflow: visible;
 }
 .nav li {
   display: inline-block;
@@ -28,21 +28,23 @@ h2 {
 }
 .nav li.current a {
   color: #FFE435;
-  background: #333;
+  border-bottom: 6px solid #FFE435;
 }
 .nav a {
-  color: #888;
+  color: #777;
   text-decoration: none;
   font-size: 13px;
   text-transform: uppercase;
   line-height: 48px;
+  height: 48px;
   width: 160px;
+  border-bottom: 6px solid #333;
   display: block;
   padding: 0 24px;
   font-family: "nimbus-sans-extended";
 }
 .nav a:hover {
-  background: #333;
+  color: #999;
 }
 
 .header {
@@ -52,7 +54,6 @@ h2 {
   overflow: hidden;
   background: #FFE435 url('background.png') center center;
   background-size: cover;
-  padding-bottom: 78px;
 }
 .header:after {
   content: "";
@@ -111,7 +112,7 @@ h2 {
 }
 
 .wrapper {
-  padding: 72px 0;
+  padding: 96px 0;
   min-width: 820px;
 }
 
