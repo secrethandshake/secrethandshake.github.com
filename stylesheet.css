@@ -1,54 +1,133 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
-body { font-family: Helvetica, Arial, sans-serif; background: #000; }
+body { font-family: "museo-slab",serif; background: #FFF; }
 
-h1, h2 { color: #FFF; font-size: 44px; line-height: 48px; font-weight: bold; }
+h1, h2 { color: #111; font-size: 36px; line-height: 40px; font-weight: bold; }
 h1 strong { color: yellow; }
 h1 span { }
-h1 { margin: 0 0 48px 0; }
-h2 { display: none; font-size: 20px; line-height: 24px; padding-top: 24px; border-top: 5px solid #FFF; margin-bottom: 36px; }
+h1 {  }
+h2 { 
+  color: #5C5213; 
+  font-family: "museo-slab",serif; 
+  font-weight: normal; 
+  font-size: 21px; 
+  line-height: 28px; 
+  padding-top: 18px; 
+}
 
-a { color: yellow; text-decoration: none; }
-a:hover { color: #FFF; }
-
-.container {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  border-top: 12px yellow solid;
-  bottom: 0;
-  left: 96px;
-  padding: 84px 0;
-  max-width: 560px;
-}
-.overlay {
-  position: absolute;
-  background: rgba(0,0,0,0.7);
-  top: 0; bottom: 0; left: 0; right: 0;
-  z-index: 2;
-  display: block;
-}
-.background {
-  position: absolute;
-  top: 50%; left: 50%;
-  display: none;
-  z-index: 1;
-}
-.background-container {
-  position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
+.nav {
+  background: #111;
   overflow: hidden;
+  clear: both;
+  text-align: center;
+  height: 48px;
+}
+.nav li {
+  display: inline-block;
+  margin: 0;
+}
+.nav li.current a {
+  color: #FFE435;
+  background: #333;
+}
+.nav a {
+  color: #888;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: 48px;
+  width: 160px;
+  display: block;
+  padding: 0 24px;
+  font-family: "nimbus-sans-extended";
+}
+.nav a:hover {
+  background: #333;
 }
 
-.rsvp {
-  display: none;
-  padding: 12px 24px;
-  background: yellow;
-  color: #000;
-  font-size: 20px;
-  font-weight: bold;
-}
-.rsvp:hover {
+.header {
   background: #FFF;
-  color: #000;
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  background: #FFE435 url('background.png') center center;
+  background-size: cover;
+  padding-bottom: 78px;
+}
+.header:after {
+  content: "";
+  background: url('edge-reverse.png') left bottom repeat-x;
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 0;
+  height: 20px;
+}
+
+.next {
+
+}
+
+.wrapper {
+  
+}
+
+.logo {
+  width: 200px; height: 200px;
+  margin: 0 auto 24px auto;
+  display: block;
+  background: url('logo-min.png?v=2');
+}
+
+.content {
+  margin: 0 auto 0 auto;
+  width: 820px;
+  text-align: center;
+  padding: 0;
+}
+
+.meetup {
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "nimbus-sans-extended";
+  text-transform: uppercase;
+}
+
+.meetup a {
+  text-decoration: none;
+  font-family: "museo-slab",serif;
+  text-transform: none;
+  font-weight: bold;
+  color: #111;
+}
+
+.snark {
+  font-size: 14px;
+  color: #111;
+  text-transform: uppercase;
+  font-family: "nimbus-sans-extended";
+  display: block;
+  margin: 0 0 12px 0;
+}
+
+.wrapper {
+  padding: 72px 0;
+  min-width: 820px;
+}
+
+.button {
+  padding: 12px 24px;
+  background: #FFE435;
+  border-radius: 3px;
+  font-family: "nimbus-sans-extended";
+  font-size: 14px;
+  font-weight: bold;
+  color: #111;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-signup {
+  margin: 24px 0 0 0;
 }

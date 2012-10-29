@@ -124,42 +124,19 @@ Date.prototype.format = function (mask, utc) {
   return dateFormat(this, mask, utc);
 };
 
-function resizeBackgroundImage() {
-  var t = $('.background'),
-      width_to_height_ratio = 1024 / 683,
-      window_height = $(window).height(),
-      window_width = $(window).width(),
-      window_width_to_height_ratio = window_width / window_height,
-      height = t.height(),
-      width = t.width();
-
-  if (window_width_to_height_ratio < width_to_height_ratio) {
-    t.height(window_height);
-    t.width(window_height * width_to_height_ratio)
-  } else {
-    t.width(window_width);
-    t.height(window_width * (1 / width_to_height_ratio))
-  }
-  t.css({ marginTop: -t.height()/2, marginLeft: -t.width()/2 })
-}
-
 $(document).ready(function(){
   $('.background').fadeIn();
-  $(document).on("load", ".background", function(){ $(this).fadeIn(); });
-  resizeBackgroundImage();
-  $(window).resize(function(){
-    resizeBackgroundImage();
-  });
+
   $.getJSON("http://api.meetup.com/2/events?status=upcoming&_=1340331595000&order=time&group_urlname=secrethandshake&desc=false&offset=0&format=json&page=1&fields=&sig_id=11518245&sig=842ec88019c16dae46ccc7e01ff55a11aae99ad9&callback=?", function(data){                                  
     var event = data.results[0],
-        time = new Date(event.time).format("h:MM TT"),
-        date = new Date(event.time).format("dddd, mmmm dS, yyyy"),
-        venue = event.venue
+      time = new Date(event.time).format("h:MM TT"),
+      date = new Date(event.time).format("dddd, mmmm dS, yyyy"),
+      venue = event.venue
     ;
     if(event.name !== null) { 
-      $('h2').html('<a href="' + event.event_url + '">' + event.name + '</a><br />' + time + '<br />' + date + '<br />' + venue.name + ', ' + venue.address_1).fadeIn();
-      $('.rsvp').attr('href',event.event_url).fadeIn();
+      $('.meetup').html('<h1><a href="' + event.event_url + '">' + event.name + '</a></h1><br />' + time + '<br />' + date + '<br />' + venue.name + ', ' + venue.address_1).fadeIn();
+      // $('.rsvp').attr('href',event.event_url).fadeIn();
     } 
-    $('h2').fadeIn();
+    // $('h2').fadeIn();
   });
 });
