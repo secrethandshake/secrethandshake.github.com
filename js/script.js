@@ -168,9 +168,11 @@ function eventCache() {
 $(document).ready(function(){
   eventCache();
   
-  $('.photos').on('scroll', function(){
+  var pcw = $('.photos-content').width() / $('.photos-bg').width();  
+
+  $('.photos-content').on('scroll', function(){
     console.log('scroll');
-    var sl = $(this).scrollLeft() * -0.44;
+    var sl = $(this).scrollLeft() * -pcw;
     $('.photos-bg').css("left", "" + sl + "px")
   });
 });
