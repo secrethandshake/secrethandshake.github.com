@@ -89,6 +89,32 @@ h2 {
 
 .photos {
   background: #191919;
+  text-align: left;
+  height: 408px;
+  overflow: scroll;
+  position: relative;
+}
+.photos-bg {
+  height: 408px;
+  width: 3672px;
+  background: url('/img/photos.jpg');
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.photos-content {
+  position: relative;
+  z-index: 99;
+  ul {
+    width: 2000px;
+  }
+  li {
+    width: 1000px;
+    display: block;
+    float: left;
+    color: #FFF;
+    font-size: 50px;
+  }
 }
 
 .about {
