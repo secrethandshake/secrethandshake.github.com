@@ -147,6 +147,19 @@ h2 {
   color: #FFF;
 }
 
+.footer a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #FFE435;
+}
+
+.footer a:active {
+  color: #5C5213;
+}
+
 .logo {
   width: 200px; height: 200px;
   margin: 0 auto 24px auto;
@@ -212,6 +225,11 @@ h2 {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
+}
+
+.button:hover {
+  background: #23bf51;
+  color: #FFF;
 }
 
 .button-signup {
