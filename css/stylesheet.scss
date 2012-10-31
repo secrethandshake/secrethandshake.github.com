@@ -47,6 +47,8 @@ h2 {
   color: #999;
 }
 
+
+// SECTIONS //
 .header {
   background: #FFF;
   position: relative;
@@ -64,16 +66,21 @@ h2 {
   height: 20px;
 }
 
-.footer {
-  background: #191919;
-}
-
 .next {
 
 }
 
-.wrapper {
+.photos {
+  background: #191919;
+}
+
+.about {
   
+}
+
+.footer {
+  background: #191919;
+  color: #FFF;
 }
 
 .logo {
@@ -118,6 +125,7 @@ h2 {
 .wrapper {
   padding: 96px 0;
   min-width: 820px;
+  text-align: center;
 }
 
 .button {
