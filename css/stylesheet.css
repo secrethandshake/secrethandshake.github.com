@@ -88,12 +88,12 @@ h2 {
   position: relative;
   clear: both;
   overflow: hidden;
-  background: #ffe435 url("background.png") center center;
+  background: #ffe435 url("/img/background.png") center center;
   background-size: cover; }
 
 .header:after {
   content: "";
-  background: url("edge-reverse.png") left bottom repeat-x;
+  background: url("/img/edge-reverse.png") left bottom repeat-x;
   position: absolute;
   left: 0;
   right: 0;
@@ -105,7 +105,7 @@ h2 {
   height: 200px;
   margin: 0 auto 24px auto;
   display: block;
-  background: url("logo-min.png?v=2"); }
+  background: url("/img/logo-min.png?v=2"); }
 
 .content {
   margin: 0 auto 0 auto;
