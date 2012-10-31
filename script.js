@@ -126,17 +126,42 @@ Date.prototype.format = function (mask, utc) {
 
 $(document).ready(function(){
   $('.background').fadeIn();
-
-  $.getJSON("http://api.meetup.com/2/events?status=upcoming&_=1340331595000&order=time&group_urlname=secrethandshake&desc=false&offset=0&format=json&page=1&fields=&sig_id=11518245&sig=842ec88019c16dae46ccc7e01ff55a11aae99ad9&callback=?", function(data){                                  
-    var event = data.results[0],
-      time = new Date(event.time).format("h:MM TT"),
-      date = new Date(event.time).format("dddd, mmmm dS, yyyy"),
-      venue = event.venue
-    ;
+    
+  function renderEvent(event) {
+    console.log(event);
+    var time = new Date(event.time).format("h:MM TT"),
+        date = new Date(event.time).format("dddd, mmmm dS, yyyy"),
+        venue = event.venue;
+      
     if(event.name !== null) { 
       $('.meetup').html('<h1><a href="' + event.event_url + '">' + event.name + '</a></h1><br />' + time + '<br />' + date + '<br />' + venue.name + ', ' + venue.address_1).fadeIn();
       // $('.rsvp').attr('href',event.event_url).fadeIn();
     } 
     // $('h2').fadeIn();
-  });
+  }
+  
+  function isCacheValid(c){
+    var nowDate = new Date();
+    var cacheDate = new Date(c);
+    if((nowDate-cacheDate) >= 86400000) {
+      return false;
+    }
+    return true;
+  }
+  
+  if(typeof(Storage)!=="undefined") {  
+    if(localStorage.event && isCacheValid(localStorage.eventCacheDate)) {
+      renderEvent(JSON.parse(localStorage.event));
+    } else {
+      $.getJSON("http://api.meetup.com/2/events?status=upcoming&_=1340331595000&order=time&group_urlname=secrethandshake&desc=false&offset=0&format=json&page=1&fields=&sig_id=11518245&sig=842ec88019c16dae46ccc7e01ff55a11aae99ad9&callback=?", function(data){                                  
+        localStorage.event = JSON.stringify(data.results[0]);
+        localStorage.eventCacheDate = new Date();
+        renderEvent(JSON.parse(localStorage.event));
+      });
+    }
+  } else {
+    $.getJSON("http://api.meetup.com/2/events?status=upcoming&_=1340331595000&order=time&group_urlname=secrethandshake&desc=false&offset=0&format=json&page=1&fields=&sig_id=11518245&sig=842ec88019c16dae46ccc7e01ff55a11aae99ad9&callback=?", function(data){                                  
+      renderEvent(data.results[0]);
+    });
+  }
 });
