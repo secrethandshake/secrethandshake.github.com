@@ -4,13 +4,23 @@
 
 @include grid(12, 55px, 24px, true, true); 
 
-body { font-family: "museo-slab",serif; background: #FFF ; }
+body { 
+  font-family: "nimbus-sans-extended", sans-serif; 
+  background: #FFF; 
+}
 
-h1, h2 { color: #111; font-size: 36px; line-height: 40px; font-weight: bold; }
+h1, h2 { 
+  color: #111; 
+  font-size: 36px; 
+  line-height: 40px; 
+  font-weight: bold; 
+  font-family: "museo-slab",serif; 
+}
+
 h1 strong { color: yellow; }
 h2 { 
   color: #5C5213; 
-  font-family: "museo-slab",serif; 
+  font-family: "museo-slab", serif; 
   font-weight: normal; 
   font-size: 21px; 
   line-height: 28px; 
