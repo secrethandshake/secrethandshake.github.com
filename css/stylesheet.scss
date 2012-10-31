@@ -67,7 +67,10 @@ h2 {
 }
 
 .next {
-
+  color: #FFF;
+  overflow: hidden;
+  background: #FFE435 url('/img/location-map.jpg') center center;
+  background-size: cover;
 }
 
 .photos {
@@ -110,7 +113,7 @@ h2 {
   font-family: "museo-slab",serif;
   text-transform: none;
   font-weight: bold;
-  color: #111;
+  color: #FFF;
 }
 
 .snark {
@@ -120,6 +123,10 @@ h2 {
   font-family: "nimbus-sans-extended";
   display: block;
   margin: 0 0 12px 0;
+}
+
+.snark-dark {
+  color: #FFE435;
 }
 
 .wrapper {
@@ -133,7 +140,7 @@ h2 {
   background: #FFE435;
   border-radius: 3px;
   font-family: "nimbus-sans-extended";
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   color: #111;
   text-transform: uppercase;
