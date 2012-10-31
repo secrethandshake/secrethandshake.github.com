@@ -19,7 +19,7 @@ h2 {
   background: #111;
   clear: both;
   text-align: center;
-  height: 54px;
+  height: 48px;
   overflow: visible;
 }
 .nav li {
@@ -28,7 +28,6 @@ h2 {
 }
 .nav li.current a {
   color: #FFE435;
-  border-bottom: 6px solid #FFE435;
 }
 .nav a {
   color: #777;
@@ -38,7 +37,6 @@ h2 {
   line-height: 48px;
   height: 48px;
   width: 160px;
-  border-bottom: 6px solid #333;
   display: block;
   padding: 0 24px;
   font-family: "nimbus-sans-extended";
@@ -104,11 +102,12 @@ h2 {
 
 .snark {
   font-size: 14px;
-  color: #111;
+  color: #5C5213;
   text-transform: uppercase;
   font-family: "nimbus-sans-extended";
   display: block;
   margin: 0 0 12px 0;
+  
 }
 
 .wrapper {
