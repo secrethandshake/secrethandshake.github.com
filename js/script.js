@@ -124,9 +124,7 @@ Date.prototype.format = function (mask, utc) {
   return dateFormat(this, mask, utc);
 };
 
-$(document).ready(function(){
-  $('.background').fadeIn();
-    
+function eventCache() {
   function renderEvent(event) {
     console.log(event);
     var time = new Date(event.time).format("h:MM TT"),
@@ -164,4 +162,17 @@ $(document).ready(function(){
       renderEvent(data.results[0]);
     });
   }
+}
+
+
+$(document).ready(function(){
+  eventCache();
+  
+  $('.photos').on('scroll', function(){
+    console.log('scroll');
+    var sl = $(this).scrollLeft() * -0.44;
+    $('.photos-bg').css("left", "" + sl + "px")
+  });
 });
+
+
