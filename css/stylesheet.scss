@@ -2,7 +2,7 @@
 @import '_lib/reset';
 @import '_lib/grid';
 
-@include grid(12, 55px, 30px, true, true); 
+@include grid(12, 55px, 24px, true, true); 
 
 body { font-family: "museo-slab",serif; background: #FFF ; }
 
@@ -66,10 +66,6 @@ h2 {
 
 .next {
 
-}
-
-.wrapper {
-  
 }
 
 .logo {
