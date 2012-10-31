@@ -84,9 +84,8 @@ h2 {
 }
 
 .next {
-  color: #FFF;
   overflow: hidden;
-  background: #FFE435 url('/img/location-map.jpg') center center;
+  background: #FFF;
   background-size: cover;
   z-index: 1;
 }
@@ -95,8 +94,8 @@ h2 {
   background: #191919;
   text-align: left;
   height: 408px;
-  overflow: scroll;
-  position: relative;
+  overflow: hidden;
+  position: relative; 
 }
 .photos-bg {
   height: 408px;
@@ -107,17 +106,35 @@ h2 {
   left: 0;
 }
 .photos-content {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 408px;
+  width: 100%;
+  overflow: scroll;
   z-index: 99;
   ul {
-    width: 2000px;
+    width: 6000px;
   }
   li {
     width: 1000px;
     display: block;
     float: left;
     color: #FFF;
-    font-size: 50px;
+    font-family: "museo-slab",serif; 
+    font-size: 36px;
+    height: 408px;
+    box-sizing: border-box;
+    padding: 160px 0 0 0;
+    text-shadow: 0 1px 3px #000;
+    span {
+      font-family: "nimbus-sans-extended", sans-serif;  
+      font-size: 14px;
+      clear: both;
+      display: block;
+      margin: 24px 0 0 0;
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -161,7 +178,6 @@ h2 {
   margin: 0 auto;
   font-size: 14px;
   line-height: 20px;
-  font-family: "nimbus-sans-extended";
   text-transform: uppercase;
 }
 
@@ -170,14 +186,13 @@ h2 {
   font-family: "museo-slab",serif;
   text-transform: none;
   font-weight: bold;
-  color: #FFF;
+  color: #111;
 }
 
 .snark {
   font-size: 14px;
   color: #5C5213;
   text-transform: uppercase;
-  font-family: "nimbus-sans-extended";
   display: block;
   margin: 0 0 12px 0;
 }
@@ -204,7 +219,6 @@ h2 {
   padding: 12px 24px;
   background: #FFE435;
   border-radius: 3px;
-  font-family: "nimbus-sans-extended";
   font-size: 16px;
   font-weight: bold;
   color: #111;
