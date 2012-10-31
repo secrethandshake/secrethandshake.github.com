@@ -27,6 +27,10 @@ h2 {
   padding-top: 18px; 
 }
 
+.subheading-light {
+  color: #777;
+}
+
 .nav {
   background: #111;
   clear: both;
@@ -91,7 +95,7 @@ h2 {
   text-align: left;
   height: 408px;
   overflow: hidden;
-  position: relative;
+  position: relative; 
 }
 .photos-bg {
   height: 408px;
@@ -107,7 +111,7 @@ h2 {
   left: 0;
   height: 408px;
   width: 100%;
-  overflow: scroll;
+  overflow: hidden;
   z-index: 99;
   ul {
     width: 6000px;
@@ -186,6 +190,10 @@ h2 {
 
 .snark-dark {
   color: #FFE435;
+}
+
+.snark-light {
+  color: #777;
 }
 
 .wrapper {
