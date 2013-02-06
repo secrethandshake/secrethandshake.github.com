@@ -5,6 +5,7 @@
 @include grid(12, 55px, 24px, true, true);
 
 $yellow: #FFE435;
+$blue: #5EB4FF;
 
 body {
   background: #FFF;
@@ -30,7 +31,7 @@ h2 {
   line-height: 36px;
 }
 
-p {
+p, li {
   font-size: 14px;
   line-height: 24px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -148,7 +149,6 @@ a {
 .footer {
   background: #EEE;
   color: #222;
-  border-top: 24px solid #E0E0E0;
   padding: 60px 0 !important;
 }
 
@@ -204,7 +204,7 @@ a {
   cursor: help;
 }
 
-.meetup p {
+.meetup p, .goodwork p {
   font-size: 30px;
   line-height: 36px;
   font-family: "museo-slab",serif;
@@ -240,6 +240,11 @@ a {
   display: inline-block;
 }
 
+.section {
+  h1 { color: #111; }
+  border-top: 24px solid #EEE;
+}
+
 .button:hover {
   background: #FFF;
   color: #111;
@@ -251,5 +256,20 @@ a {
 }
 
 #goodwork {
-
+  .next {
+    background: $blue;
+  }
+  h1 span { color: $blue; }
+  .logo {
+    width: 625px; height: 595px;
+    display: block;
+    background: url('/img/gw-logo-big.png?v=7');
+  }
+  .next {
+    h1 { color: #111; }
+  }
+  .section {
+    h1 { color: #111; }
+    li { text-align: center; }
+  }
 }
