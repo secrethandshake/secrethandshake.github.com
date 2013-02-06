@@ -5,7 +5,7 @@
 @include grid(12, 55px, 24px, true, true);
 
 $yellow: #FFE435;
-$blue: #5EB4FF;
+$blue: #2FD9FD;
 
 body {
   background: #FFF;
@@ -291,7 +291,7 @@ a {
   .logo {
     width: 625px; height: 595px;
     display: block;
-    background: url('/img/gw-logo-big.png?v=7');
+    background: url('/img/gw-logo-big.png?v=8');
   }
   .next {
     h1 { color: #111; }
