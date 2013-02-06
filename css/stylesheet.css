@@ -250,6 +250,9 @@ a {
   z-index: 1;
   text-align: center; }
 
+.next-gw {
+  background: #2fd9fd url("/img/bluebg.png") center center; }
+
 .photos {
   background: #191919;
   text-align: left;
@@ -397,7 +400,7 @@ a {
   position: fixed;
   top: 0px;
   right: 0px;
-  background: url("/img/goodwork-flipper.png?v=5");
+  background: url("/img/goodwork-flipper.png");
   z-index: 999;
   text-indent: -30000px; }
 
@@ -408,19 +411,17 @@ a {
   position: fixed;
   top: 0px;
   right: 0px;
-  background: url("/img/sh-flipper.png?v=2");
+  background: url("/img/sh-flipper.png");
   z-index: 999;
   text-indent: -30000px; }
 
-#goodwork .next {
-  background: #2fd9fd; }
 #goodwork h1 span {
   color: #2fd9fd; }
 #goodwork .logo {
   width: 625px;
   height: 595px;
   display: block;
-  background: url("/img/gw-logo-big.png?v=8"); }
+  background: url("/img/gw-logo-big.png?v=7"); }
 #goodwork .next h1 {
   color: #111; }
 #goodwork .section h1 {
