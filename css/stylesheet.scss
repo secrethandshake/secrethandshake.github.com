@@ -4,6 +4,8 @@
 
 @include grid(12, 55px, 24px, true, true);
 
+$yellow: #FFE435;
+
 body {
   font-family: "nimbus-sans-extended", sans-serif;
   background: #FFF;
@@ -15,6 +17,7 @@ h1, h2 {
   line-height: 54px;
   font-weight: bold;
   font-family: "museo-slab",serif;
+  margin: 0 0 24px 0;
 }
 h1 span { color: #FFE435; }
 h2 {
@@ -23,15 +26,15 @@ h2 {
   font-weight: normal;
   font-size: 30px;
   line-height: 36px;
-  padding-top: 24px;
 }
 
-.subheading-light {
-  color: #777;
+p {
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .nav {
-  background: #111;
+  background: #000;
   clear: both;
   text-align: center;
   height: 48px;
@@ -68,17 +71,9 @@ h2 {
   background: #FFE435 url('/img/background.png') center center;
   // background: #222;
   background-size: cover;
-}
-.header:after {
-  content: "";
-  //background: url('/img/edge-reverse.png') left bottom repeat-x;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 20px;
-  z-index: 999;
+  h2 {
+    margin: 0;
+  }
 }
 
 .next {
@@ -86,6 +81,7 @@ h2 {
   background: #FFE435 url('/img/yellowbg.jpg') center center;
   background-size: cover;
   z-index: 1;
+  text-align: center;
 }
 
 .photos {
@@ -137,12 +133,15 @@ h2 {
 }
 
 .about {
-
+  h1 {
+    color: #111;
+  }
 }
 
 .footer {
-  background: #191919;
-  color: #FFF;
+  background: #EEE;
+  color: #222;
+  border-top: 24px solid #E0E0E0;
 }
 
 .footer a {
@@ -174,9 +173,8 @@ h2 {
 
 .meetup {
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 24px;
-  text-transform: uppercase;
 }
 
 .meetup a {
@@ -187,18 +185,26 @@ h2 {
   color: #111;
 }
 
+.meetup p {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "museo-slab",serif;
+}
+
 .snark {
   font-size: 18px;
   color: #222;
   text-transform: uppercase;
   display: block;
-  margin: 0 0 12px 0;
+  margin: 0 0 24px 0;
 }
 
 .wrapper {
   padding: 120px 0;
-  min-width: 820px;
-  text-align: center;
+  min-width: 948px;
+  h1, h2, .snark {
+    text-align: center;
+  }
 }
 
 .button {
