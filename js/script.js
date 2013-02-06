@@ -133,7 +133,7 @@ function eventCache() {
 
     if(event.name !== null) {
       if(venue !== null) {
-        $('.meetup').html('<h1><a href="' + event.event_url + '">' + event.name + '</a></h1><p class="meetup-deets">' + time + '<br />' + date + '<br />' + venue.name + ', ' + venue.address_1 + '</p>').fadeIn();
+        $('.meetup').html('<h1><a href="' + event.event_url + '">' + event.name + '</a></h1><p class="meetup-deets">' + time + '<br />' + date + '<br />' + '<a href="http://google.ca/maps?q=' + venue.name + venue.address_1 + '">' + venue.name + ', ' + venue.address_1 + '</a></p>').fadeIn();
       } else {
         $('.meetup').html('<h1><a href="' + event.event_url + '">' + event.name + '</a></h1><p class="meetup-deets">' + time + '<br />' + date + '</p>').fadeIn();
       }
