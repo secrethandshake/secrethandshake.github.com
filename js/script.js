@@ -126,7 +126,6 @@ Date.prototype.format = function (mask, utc) {
 
 function eventCache() {
   function renderEvent(event) {
-    console.log(event);
     var time = new Date(event.time).format("h:MM TT"),
         date = new Date(event.time).format("dddd, mmmm dS, yyyy"),
         venue = event.venue;
@@ -174,7 +173,6 @@ $(document).ready(function(){
   var pcw = $('.photos-content').width() / $('.photos-bg').width();
 
   $('.photos-content').on('scroll', function(){
-    console.log('scroll');
     var sl = $(this).scrollLeft() * -pcw;
     $('.photos-bg').css("left", "" + sl + "px")
   });
