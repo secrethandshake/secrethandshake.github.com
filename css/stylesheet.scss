@@ -1,0 +1,304 @@
+@import '_lib/bourbon/bourbon';
+@import '_lib/reset';
+@import '_lib/grid';
+
+@include grid(12, 55px, 24px, true, true);
+
+$yellow: #FFE435;
+$blue: #2fd9fd;
+
+body {
+  background: #FFF;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2 {
+  color: #FFF;
+  font-size: 48px;
+  line-height: 54px;
+  font-weight: bold;
+  font-family: "museo-slab",serif;
+  margin: 0 0 24px 0;
+}
+h1 span { color: $yellow; }
+h2 {
+  color: #999;
+  font-family: "museo-slab", serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+p, li {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #777;
+}
+a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.nav {
+  background: #000;
+  clear: both;
+  text-align: center;
+  height: 48px;
+  overflow: visible;
+}
+.nav li {
+  display: inline-block;
+  margin: 0;
+}
+.nav li.current a {
+  color: $yellow;
+}
+.nav a {
+  color: #777;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: 48px;
+  height: 48px;
+  width: 160px;
+  display: block;
+  padding: 0 24px;
+  font-family: "nimbus-sans-extended";
+}
+.nav a:hover {
+  color: #999;
+}
+
+// SECTIONS //
+.header {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  background: $yellow url('/img/background.png') center center;
+  // background: #222;
+  background-size: cover;
+  h2 {
+    margin: 0;
+  }
+}
+
+.next {
+  overflow: hidden;
+  background: $yellow url('/img/yellowbg.png') center center;
+  background-size: cover;
+  z-index: 1;
+  text-align: center;
+}
+
+.next-gw {
+  background: #2fd9fd url('/img/bluebg.png') center center;
+}
+
+.photos {
+  background: #191919;
+  text-align: left;
+  height: 408px;
+  overflow: hidden;
+  position: relative;
+}
+.photos-bg {
+  height: 408px;
+  width: 3672px;
+  background: url('/img/photos.jpg');
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.photos-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 408px;
+  width: 100%;
+  overflow: scroll;
+  z-index: 99;
+  ul {
+    width: 6000px;
+  }
+  li {
+    width: 1000px;
+    display: block;
+    float: left;
+    color: #FFF;
+    font-family: "museo-slab",serif;
+    font-size: 36px;
+    height: 408px;
+    box-sizing: border-box;
+    padding: 160px 0 0 0;
+    text-shadow: 0 1px 3px #000;
+    span {
+      font-family: "nimbus-sans-extended", sans-serif;
+      font-size: 14px;
+      clear: both;
+      display: block;
+      margin: 24px 0 0 0;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.about {
+  h1 {
+    color: #111;
+  }
+}
+
+.footer {
+  background: #EEE;
+  color: #222;
+  padding: 60px 0 !important;
+}
+
+.footer a, .footer p {
+  color: #999;
+  text-decoration: none;
+}
+
+.footer a {
+  text-decoration: underline;
+}
+
+.footer p {
+
+}
+
+.footer a:hover {
+  color: #777;
+}
+
+.footer a:active {
+  color: #5C5213;
+}
+
+.logo {
+  width: 625px; height: 595px;
+  margin: -225px auto 60px auto;
+  display: block;
+  background: url('/img/logo-big.png?v=3');
+}
+
+.content {
+  margin: 0 auto 0 auto;
+  width: 820px;
+  text-align: center;
+  padding: 0;
+}
+
+.meetup {
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.meetup a {
+  text-decoration: none;
+  font-family: "museo-slab",serif;
+  text-transform: none;
+  color: #111;
+}
+.meetup p > a:hover {
+  border-bottom: 2px dashed rgb(216, 193, 42);
+  cursor: help;
+}
+
+.meetup p, .goodwork p {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "museo-slab",serif;
+  color: #111;
+}
+
+.snark {
+  font-size: 18px;
+  color: #222;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 0 24px 0;
+  font-family: "nimbus-sans-extended", sans-serif;
+}
+
+.wrapper {
+  padding: 120px 0;
+  min-width: 948px;
+  h1, h2, .snark {
+    text-align: center;
+  }
+}
+
+.button {
+  padding: 24px 48px;
+  border: 3px solid #111;
+  border-radius: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.section {
+  h1 { color: #111; }
+  border-top: 24px solid #EEE;
+}
+
+.button:hover {
+  background: #FFF;
+  color: #111;
+  border-color: #FFF;
+}
+
+.button-signup {
+  margin: 48px 0 0 0;
+}
+
+.social-icons {
+  text-align: right;
+}
+
+.goodwork-flipper {
+  display: block;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background: url('/img/goodwork-flipper.png');
+  z-index: 999;
+  text-indent: -30000px;
+}
+
+.sh-flipper {
+  display: block;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background: url('/img/sh-flipper.png');
+  z-index: 999;
+  text-indent: -30000px;
+}
+
+#goodwork {
+  h1 span { color: $blue; }
+  .logo {
+    width: 625px; height: 595px;
+    display: block;
+    background: url('/img/gw-logo-big.png?v=7');
+  }
+  .next {
+    h1 { color: #111; }
+  }
+  .section {
+    h1 { color: #111; }
+    li { text-align: center; }
+  }
+}

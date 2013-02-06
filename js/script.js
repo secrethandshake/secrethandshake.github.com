@@ -124,42 +124,63 @@ Date.prototype.format = function (mask, utc) {
   return dateFormat(this, mask, utc);
 };
 
-function resizeBackgroundImage() {
-  var t = $('.background'),
-      width_to_height_ratio = 1024 / 683,
-      window_height = $(window).height(),
-      window_width = $(window).width(),
-      window_width_to_height_ratio = window_width / window_height,
-      height = t.height(),
-      width = t.width();
+function eventCache() {
+  function renderEvent(event) {
+    console.log(event);
+    var time = new Date(event.time).format("h:MM TT"),
+        date = new Date(event.time).format("dddd, mmmm dS, yyyy"),
+        venue = event.venue;
 
-  if (window_width_to_height_ratio < width_to_height_ratio) {
-    t.height(window_height);
-    t.width(window_height * width_to_height_ratio)
-  } else {
-    t.width(window_width);
-    t.height(window_width * (1 / width_to_height_ratio))
+    if(event.name !== null) {
+      if(venue !== null) {
+        $('.meetup').html('<h1><a href="' + event.event_url + '">' + event.name + '</a></h1><p class="meetup-deets">' + time + '<br />' + date + '<br />' + '<a href="http://google.ca/maps?q=' + venue.name + venue.address_1 + '">' + venue.name + ', ' + venue.address_1 + '</a></p>').fadeIn();
+      } else {
+        $('.meetup').html('<h1><a href="' + event.event_url + '">' + event.name + '</a></h1><p class="meetup-deets">' + time + '<br />' + date + '</p>').fadeIn();
+      }
+    }
   }
-  t.css({ marginTop: -t.height()/2, marginLeft: -t.width()/2 })
+  function isCacheValid(c){
+    var nowDate = new Date();
+    var cacheDate = new Date(c);
+    if((nowDate-cacheDate) >= 86400000) {
+      return false;
+    }
+    return true;
+  }
+
+  if(typeof(Storage)!=="undefined") {
+    if(localStorage.event && isCacheValid(localStorage.eventCacheDate)) {
+      renderEvent(JSON.parse(localStorage.event));
+    } else {
+      $.getJSON("http://api.meetup.com/2/events?status=upcoming&_=1340331595000&order=time&group_urlname=secrethandshake&desc=false&offset=0&format=json&page=1&fields=&sig_id=11518245&sig=842ec88019c16dae46ccc7e01ff55a11aae99ad9&callback=?", function(data){
+        localStorage.event = JSON.stringify(data.results[0]);
+        localStorage.eventCacheDate = new Date();
+        renderEvent(JSON.parse(localStorage.event));
+      });
+    }
+  } else {
+    $.getJSON("http://api.meetup.com/2/events?status=upcoming&_=1340331595000&order=time&group_urlname=secrethandshake&desc=false&offset=0&format=json&page=1&fields=&sig_id=11518245&sig=842ec88019c16dae46ccc7e01ff55a11aae99ad9&callback=?", function(data){
+      renderEvent(data.results[0]);
+    });
+  }
 }
 
+
 $(document).ready(function(){
-  $('.background').fadeIn();
-  $(document).on("load", ".background", function(){ $(this).fadeIn(); });
-  resizeBackgroundImage();
-  $(window).resize(function(){
-    resizeBackgroundImage();
+  eventCache();
+
+  var pcw = $('.photos-content').width() / $('.photos-bg').width();
+
+  $('.photos-content').on('scroll', function(){
+    console.log('scroll');
+    var sl = $(this).scrollLeft() * -pcw;
+    $('.photos-bg').css("left", "" + sl + "px")
   });
-  $.getJSON("http://api.meetup.com/2/events?status=upcoming&_=1340331595000&order=time&group_urlname=secrethandshake&desc=false&offset=0&format=json&page=1&fields=&sig_id=11518245&sig=842ec88019c16dae46ccc7e01ff55a11aae99ad9&callback=?", function(data){                                  
-    var event = data.results[0],
-        time = new Date(event.time).format("h:MM TT"),
-        date = new Date(event.time).format("dddd, mmmm dS, yyyy"),
-        venue = event.venue
-    ;
-    if(event.name !== null) { 
-      $('h2').html('<a href="' + event.event_url + '">' + event.name + '</a><br />' + time + '<br />' + date + '<br />' + venue.name + ', ' + venue.address_1).fadeIn();
-      $('.rsvp').attr('href',event.event_url).fadeIn();
-    } 
-    $('h2').fadeIn();
-  });
+
+  var one = "hello", two = "secrethandshake", three = "@", four = "mail";
+  $('.next .col12').append('<a class="button button-signup" href="' + four + 'to:'+one+three+two+'.ca" title="Sign Up Now">Sign Up Now</a>');
+  $('.social-icons').prepend('<a href="' + four + 'to:'+one+three+two+'.ca" title="Email"><img src="/img/email.png" /></a>');
+
 });
+
+
