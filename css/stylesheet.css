@@ -250,6 +250,9 @@ a {
   z-index: 1;
   text-align: center; }
 
+.next-gw {
+  background: #5eb4ff url("/img/blue.png") center center; }
+
 .photos {
   background: #191919;
   text-align: left;
