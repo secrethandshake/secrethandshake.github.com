@@ -5,7 +5,7 @@
 @include grid(12, 55px, 24px, true, true);
 
 $yellow: #FFE435;
-$blue: #2FD9FD;
+$blue: #2fd9fd;
 
 body {
   background: #FFF;
@@ -93,7 +93,7 @@ a {
 }
 
 .next-gw {
-  background: $blue url('/img/blue.png') center center;
+  background: #2fd9fd url('/img/bluebg.png') center center;
 }
 
 .photos {
@@ -270,7 +270,7 @@ a {
   position: fixed;
   top: 0px;
   right: 0px;
-  background: url('/img/goodwork-flipper.png?v=5');
+  background: url('/img/goodwork-flipper.png');
   z-index: 999;
   text-indent: -30000px;
 }
@@ -282,20 +282,17 @@ a {
   position: fixed;
   top: 0px;
   right: 0px;
-  background: url('/img/sh-flipper.png?v=2');
+  background: url('/img/sh-flipper.png');
   z-index: 999;
   text-indent: -30000px;
 }
 
 #goodwork {
-  .next {
-    background: $blue;
-  }
   h1 span { color: $blue; }
   .logo {
     width: 625px; height: 595px;
     display: block;
-    background: url('/img/gw-logo-big.png?v=8');
+    background: url('/img/gw-logo-big.png?v=7');
   }
   .next {
     h1 { color: #111; }
