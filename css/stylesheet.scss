@@ -72,7 +72,7 @@ h2 {
 }
 .header:after {
   content: "";
-  background: url('/img/edge-reverse.png') left bottom repeat-x;
+  //background: url('/img/edge-reverse.png') left bottom repeat-x;
   position: absolute;
   left: 0;
   right: 0;
@@ -84,7 +84,7 @@ h2 {
 
 .next {
   overflow: hidden;
-  background: #FFF;
+  background: #FFE435;
   background-size: cover;
   z-index: 1;
 }
@@ -203,10 +203,10 @@ h2 {
 }
 
 .button {
-  padding: 12px 24px;
-  background: #FFE435;
+  padding: 24px 48px;
+  background: #FFF;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #111;
   text-transform: uppercase;
