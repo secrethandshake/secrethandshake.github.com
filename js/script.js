@@ -176,6 +176,11 @@ $(document).ready(function(){
     var sl = $(this).scrollLeft() * -pcw;
     $('.photos-bg').css("left", "" + sl + "px")
   });
+
+  var one = "hello", two = "secrethandshake", three = "@", four = "mail";
+  $('.next .col12').append('<a class="button button-signup" href="' + four + 'to:'+one+three+two+'.ca" title="Sign Up Now">Sign Up Now</a>');
+  $('.social-icons').prepend('<a href="' + four + 'to:'+one+three+two+'.ca" title="Email"><img src="/img/email.png" /></a>');
+
 });
 
 
