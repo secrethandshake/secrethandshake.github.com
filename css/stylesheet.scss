@@ -2,29 +2,29 @@
 @import '_lib/reset';
 @import '_lib/grid';
 
-@include grid(12, 55px, 24px, true, true); 
+@include grid(12, 55px, 24px, true, true);
 
-body { 
-  font-family: "nimbus-sans-extended", sans-serif; 
-  background: #FFF; 
+body {
+  font-family: "nimbus-sans-extended", sans-serif;
+  background: #FFF;
 }
 
-h1, h2 { 
-  color: #111; 
-  font-size: 36px; 
-  line-height: 40px; 
-  font-weight: bold; 
-  font-family: "museo-slab",serif; 
+h1, h2 {
+  color: #FFF;
+  font-size: 48px;
+  line-height: 54px;
+  font-weight: bold;
+  font-family: "museo-slab",serif;
 }
 
 h1 strong { color: yellow; }
-h2 { 
-  color: #5C5213; 
-  font-family: "museo-slab", serif; 
-  font-weight: normal; 
-  font-size: 21px; 
-  line-height: 28px; 
-  padding-top: 18px; 
+h2 {
+  color: #999;
+  font-family: "museo-slab", serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  padding-top: 24px;
 }
 
 .subheading-light {
@@ -61,21 +61,19 @@ h2 {
   color: #999;
 }
 
-
 // SECTIONS //
 .header {
-  background: #FFF;
   position: relative;
   clear: both;
   overflow: hidden;
-  background: #FFE435 url('/img/background.png') center center;
+  background: #222;
   background-size: cover;
 }
 .header:after {
   content: "";
   background: url('/img/edge-reverse.png') left bottom repeat-x;
   position: absolute;
-  left: 0; 
+  left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
@@ -95,7 +93,7 @@ h2 {
   text-align: left;
   height: 408px;
   overflow: hidden;
-  position: relative; 
+  position: relative;
 }
 .photos-bg {
   height: 408px;
@@ -121,14 +119,14 @@ h2 {
     display: block;
     float: left;
     color: #FFF;
-    font-family: "museo-slab",serif; 
+    font-family: "museo-slab",serif;
     font-size: 36px;
     height: 408px;
     box-sizing: border-box;
     padding: 160px 0 0 0;
     text-shadow: 0 1px 3px #000;
     span {
-      font-family: "nimbus-sans-extended", sans-serif;  
+      font-family: "nimbus-sans-extended", sans-serif;
       font-size: 14px;
       clear: both;
       display: block;
@@ -139,7 +137,7 @@ h2 {
 }
 
 .about {
-  
+
 }
 
 .footer {
@@ -176,8 +174,8 @@ h2 {
 
 .meetup {
   margin: 0 auto;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 24px;
   text-transform: uppercase;
 }
 
@@ -190,27 +188,15 @@ h2 {
 }
 
 .snark {
-  font-size: 14px;
-  color: #5C5213;
+  font-size: 18px;
+  color: #222;
   text-transform: uppercase;
   display: block;
   margin: 0 0 12px 0;
 }
 
-.snark-dark {
-  color: #FFE435;
-}
-
-.snark-dark {
-  color: #FFE435;
-}
-
-.snark-light {
-  color: #777;
-}
-
 .wrapper {
-  padding: 96px 0;
+  padding: 120px 0;
   min-width: 820px;
   text-align: center;
 }
