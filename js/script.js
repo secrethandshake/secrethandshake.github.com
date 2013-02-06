@@ -134,8 +134,10 @@ function eventCache() {
     if(event.name !== null) {
       if(venue !== null) {
         $('.meetup').html('<h1><a href="' + event.event_url + '">' + event.name + '</a></h1><p class="meetup-deets">' + time + '<br />' + date + '<br />' + '<a href="http://google.ca/maps?q=' + venue.name + venue.address_1 + '">' + venue.name + ', ' + venue.address_1 + '</a></p>').fadeIn();
+        $('.meetup').after('<a class="button button-signup" href="' + event.event_url + '">Sign Up Now</a>');
       } else {
         $('.meetup').html('<h1><a href="' + event.event_url + '">' + event.name + '</a></h1><p class="meetup-deets">' + time + '<br />' + date + '</p>').fadeIn();
+        $('.meetup').after('<a class="button button-signup" href="' + event.event_url + '">Sign Up Now</a>');
       }
     }
   }
@@ -178,7 +180,7 @@ $(document).ready(function(){
   });
 
   var one = "hello", two = "secrethandshake", three = "@", four = "mail";
-  $('.next .col12').append('<a class="button button-signup" href="' + four + 'to:'+one+three+two+'.ca" title="Sign Up Now">Sign Up Now</a>');
+  $('#goodwork .next .col12').append('<a class="button button-signup" href="' + four + 'to:'+one+three+two+'.ca" title="Sign Up Now">Sign Up Now</a>');
   $('.social-icons').prepend('<a href="' + four + 'to:'+one+three+two+'.ca" title="Email"><img src="/img/email.png" /></a>');
 
 });
