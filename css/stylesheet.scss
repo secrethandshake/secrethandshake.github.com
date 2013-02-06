@@ -5,7 +5,7 @@
 @include grid(12, 55px, 24px, true, true);
 
 $yellow: #FFE435;
-$blue: #5EB4FF;
+$blue: #2FD9FD;
 
 body {
   background: #FFF;
@@ -270,7 +270,7 @@ a {
   position: fixed;
   top: 0px;
   right: 0px;
-  background: url('/img/goodwork-flipper.png');
+  background: url('/img/goodwork-flipper.png?v=5');
   z-index: 999;
   text-indent: -30000px;
 }
@@ -282,7 +282,7 @@ a {
   position: fixed;
   top: 0px;
   right: 0px;
-  background: url('/img/sh-flipper.png');
+  background: url('/img/sh-flipper.png?v=2');
   z-index: 999;
   text-indent: -30000px;
 }
@@ -295,7 +295,7 @@ a {
   .logo {
     width: 625px; height: 595px;
     display: block;
-    background: url('/img/gw-logo-big.png?v=7');
+    background: url('/img/gw-logo-big.png?v=8');
   }
   .next {
     h1 { color: #111; }
