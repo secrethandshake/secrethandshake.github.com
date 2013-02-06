@@ -21,7 +21,7 @@ h1, h2 {
   font-family: "museo-slab",serif;
   margin: 0 0 24px 0;
 }
-h1 span { color: #FFE435; }
+h1 span { color: $yellow; }
 h2 {
   color: #999;
   font-family: "museo-slab", serif;
@@ -52,7 +52,7 @@ a {
   margin: 0;
 }
 .nav li.current a {
-  color: #FFE435;
+  color: $yellow;
 }
 .nav a {
   color: #777;
@@ -75,7 +75,7 @@ a {
   position: relative;
   clear: both;
   overflow: hidden;
-  background: #FFE435 url('/img/background.png') center center;
+  background: $yellow url('/img/background.png') center center;
   // background: #222;
   background-size: cover;
   h2 {
@@ -85,7 +85,7 @@ a {
 
 .next {
   overflow: hidden;
-  background: #FFE435 url('/img/yellowbg.png') center center;
+  background: $yellow url('/img/yellowbg.png') center center;
   background-size: cover;
   z-index: 1;
   text-align: center;
@@ -248,4 +248,8 @@ a {
 
 .button-signup {
   margin: 48px 0 0 0;
+}
+
+#goodwork {
+
 }
