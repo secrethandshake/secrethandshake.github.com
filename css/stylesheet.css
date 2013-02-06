@@ -196,7 +196,7 @@ h2 {
   font-size: 30px;
   line-height: 36px; }
 
-p {
+p, li {
   font-size: 14px;
   line-height: 24px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -300,7 +300,6 @@ a {
 .footer {
   background: #EEE;
   color: #222;
-  border-top: 24px solid #e0e0e0;
   padding: 60px 0 !important; }
 
 .footer a, .footer p {
@@ -344,7 +343,7 @@ a {
   border-bottom: 2px dashed #d8c12a;
   cursor: help; }
 
-.meetup p {
+.meetup p, .goodwork p {
   font-size: 30px;
   line-height: 36px;
   font-family: "museo-slab",serif;
@@ -375,6 +374,11 @@ a {
   text-decoration: none;
   display: inline-block; }
 
+.section {
+  border-top: 24px solid #eeeeee; }
+  .section h1 {
+    color: #111; }
+
 .button:hover {
   background: #FFF;
   color: #111;
@@ -386,6 +390,23 @@ a {
 .social-icons {
   text-align: right; }
 
+<<<<<<< HEAD
+#goodwork .next {
+  background: #5eb4ff; }
+#goodwork h1 span {
+  color: #5eb4ff; }
+#goodwork .logo {
+  width: 625px;
+  height: 595px;
+  display: block;
+  background: url("/img/gw-logo-big.png?v=7"); }
+#goodwork .next h1 {
+  color: #111; }
+#goodwork .section h1 {
+  color: #111; }
+#goodwork .section li {
+  text-align: center; }
+=======
 .goodwork-flipper {
   display: block;
   width: 150px;
@@ -396,3 +417,4 @@ a {
   background: url("/img/goodwork-flipper.png");
   z-index: 999;
   text-indent: -30000px; }
+>>>>>>> 918261fb080f5eb35d48b9ac08c7426e2de3f64b
