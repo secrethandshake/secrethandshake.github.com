@@ -7,8 +7,10 @@
 $yellow: #FFE435;
 
 body {
-  font-family: "nimbus-sans-extended", sans-serif;
   background: #FFF;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1, h2 {
@@ -31,6 +33,11 @@ h2 {
 p {
   font-size: 14px;
   line-height: 24px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #777;
+}
+a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .nav {
@@ -142,15 +149,24 @@ p {
   background: #EEE;
   color: #222;
   border-top: 24px solid #E0E0E0;
+  padding: 60px 0 !important;
 }
 
-.footer a {
-  color: #FFF;
+.footer a, .footer p {
+  color: #999;
   text-decoration: none;
 }
 
+.footer a {
+  text-decoration: underline;
+}
+
+.footer p {
+
+}
+
 .footer a:hover {
-  color: #FFE435;
+  color: #777;
 }
 
 .footer a:active {
@@ -189,6 +205,7 @@ p {
   font-size: 30px;
   line-height: 36px;
   font-family: "museo-slab",serif;
+  color: #111;
 }
 
 .snark {
@@ -197,6 +214,7 @@ p {
   text-transform: uppercase;
   display: block;
   margin: 0 0 24px 0;
+  font-family: "nimbus-sans-extended", sans-serif;
 }
 
 .wrapper {
