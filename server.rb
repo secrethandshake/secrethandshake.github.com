@@ -1,4 +1,5 @@
 require 'webrick'
+
 include WEBrick
 s = HTTPServer.new(
  :Port => 3000,
