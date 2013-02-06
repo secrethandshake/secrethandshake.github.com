@@ -245,7 +245,7 @@ h2 {
 
 .next {
   overflow: hidden;
-  background: #FFE435;
+  background: #ffe435 url("/img/yellowbg.jpg") center center;
   background-size: cover;
   z-index: 1; }
 
@@ -347,8 +347,8 @@ h2 {
 
 .button {
   padding: 24px 48px;
-  background: #FFF;
-  border-radius: 3px;
+  border: 3px solid #111111;
+  border-radius: 0px;
   font-size: 18px;
   font-weight: bold;
   color: #111;
@@ -357,8 +357,9 @@ h2 {
   display: inline-block; }
 
 .button:hover {
-  background: #23bf51;
-  color: #FFF; }
+  background: #FFF;
+  color: #111;
+  border-color: #FFF; }
 
 .button-signup {
-  margin: 24px 0 0 0; }
+  margin: 48px 0 0 0; }
