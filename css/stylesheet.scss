@@ -259,6 +259,18 @@ a {
   text-align: right;
 }
 
+.goodwork-flipper {
+  display: block;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background: url('/img/goodwork-flipper.png');
+  z-index: 999;
+  text-indent: -30000px;
+}
+
 #goodwork {
   .next {
     background: $blue;
