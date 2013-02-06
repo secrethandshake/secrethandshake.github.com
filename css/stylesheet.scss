@@ -66,7 +66,8 @@ h2 {
   position: relative;
   clear: both;
   overflow: hidden;
-  background: #222;
+  background: #FFE435 url('/img/background.png') center center;
+  // background: #222;
   background-size: cover;
 }
 .header:after {
@@ -160,7 +161,7 @@ h2 {
 
 .logo {
   width: 625px; height: 595px;
-  margin: 0 auto 24px auto;
+  margin: -225px auto 24px auto;
   display: block;
   background: url('/img/logo-big.png?v=3');
 }

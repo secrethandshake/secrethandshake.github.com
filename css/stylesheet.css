@@ -177,15 +177,9 @@ body {
   background: #FFF; }
 
 h1, h2 {
-<<<<<<< HEAD
-  color: #111;
-  font-size: 36px;
-  line-height: 40px;
-=======
   color: #FFF;
   font-size: 48px;
   line-height: 54px;
->>>>>>> 2d6a3d9a964921aa7fd5b727fcbe7f8d1a503b7f
   font-weight: bold;
   font-family: "museo-slab",serif; }
 
@@ -193,21 +187,12 @@ h1 strong {
   color: yellow; }
 
 h2 {
-<<<<<<< HEAD
-  color: #5C5213;
-  font-family: "museo-slab", serif;
-  font-weight: normal;
-  font-size: 21px;
-  line-height: 28px;
-  padding-top: 18px; }
-=======
   color: #999;
   font-family: "museo-slab", serif;
   font-weight: normal;
   font-size: 30px;
   line-height: 36px;
   padding-top: 24px; }
->>>>>>> 2d6a3d9a964921aa7fd5b727fcbe7f8d1a503b7f
 
 .subheading-light {
   color: #777; }
@@ -242,18 +227,10 @@ h2 {
   color: #999; }
 
 .header {
-<<<<<<< HEAD
-  background: #FFF;
   position: relative;
   clear: both;
   overflow: hidden;
   background: #ffe435 url("/img/background.png") center center;
-=======
-  position: relative;
-  clear: both;
-  overflow: hidden;
-  background: #222;
->>>>>>> 2d6a3d9a964921aa7fd5b727fcbe7f8d1a503b7f
   background-size: cover; }
 
 .header:after {
@@ -332,19 +309,11 @@ h2 {
   color: #5C5213; }
 
 .logo {
-<<<<<<< HEAD
   width: 625px;
   height: 595px;
-  margin: 0 auto 24px auto;
+  margin: -225px auto 24px auto;
   display: block;
   background: url("/img/logo-big.png?v=3"); }
-=======
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 24px auto;
-  display: block;
-  background: url("/img/logo-min.png?v=2"); }
->>>>>>> 2d6a3d9a964921aa7fd5b727fcbe7f8d1a503b7f
 
 .content {
   margin: 0 auto 0 auto;
@@ -354,13 +323,8 @@ h2 {
 
 .meetup {
   margin: 0 auto;
-<<<<<<< HEAD
-  font-size: 14px;
-  line-height: 20px;
-=======
   font-size: 18px;
   line-height: 24px;
->>>>>>> 2d6a3d9a964921aa7fd5b727fcbe7f8d1a503b7f
   text-transform: uppercase; }
 
 .meetup a {
@@ -371,33 +335,14 @@ h2 {
   color: #111; }
 
 .snark {
-<<<<<<< HEAD
-  font-size: 14px;
-  color: #5C5213;
-=======
   font-size: 18px;
   color: #222;
->>>>>>> 2d6a3d9a964921aa7fd5b727fcbe7f8d1a503b7f
   text-transform: uppercase;
   display: block;
   margin: 0 0 12px 0; }
 
-<<<<<<< HEAD
-.snark-dark {
-  color: #FFE435; }
-
-.snark-dark {
-  color: #FFE435; }
-
-.snark-light {
-  color: #777; }
-
-.wrapper {
-  padding: 96px 0;
-=======
 .wrapper {
   padding: 120px 0;
->>>>>>> 2d6a3d9a964921aa7fd5b727fcbe7f8d1a503b7f
   min-width: 820px;
   text-align: center; }
 
