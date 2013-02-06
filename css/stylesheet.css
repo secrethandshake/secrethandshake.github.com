@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-/*
-Errno::ENOENT: No such file or directory - css/stylesheet.scss
-
-Backtrace:
-/Users/christopherlobay/.rbenv/versions/1.9.3-p194-perf/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:339:in `read'
-/Users/christopherlobay/.rbenv/versions/1.9.3-p194-perf/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:339:in `update_stylesheet'
-/Users/christopherlobay/.rbenv/versions/1.9.3-p194-perf/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
-/Users/christopherlobay/.rbenv/versions/1.9.3-p194-perf/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `each'
-/Users/christopherlobay/.rbenv/versions/1.9.3-p194-perf/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-/Users/christopherlobay/.rbenv/versions/1.9.3-p194-perf/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:299:in `block in watch'
-/Users/christopherlobay/.rbenv/versions/1.9.3-p194-perf/lib/ruby/gems/1.9.1/gems/sass-3.2.5/vendor/listen/lib/listen/multi_listener.rb:86:in `call'
-/Users/christopherlobay/.rbenv/versions/1.9.3-p194-perf/lib/ruby/gems/1.9.1/gems/sass-3.2.5/vendor/listen/lib/listen/multi_listener.rb:86:in `on_change'
-/Users/christopherlobay/.rbenv/versions/1.9.3-p194-perf/lib/ruby/gems/1.9.1/gems/sass-3.2.5/vendor/listen/lib/listen/multi_listener.rb:95:in `block in initialize_adapter'
-/Users/christopherlobay/.rbenv/versions/1.9.3-p194-perf/lib/ruby/gems/1.9.1/gems/sass-3.2.5/vendor/listen/lib/listen/adapter.rb:162:in `call'
-/Users/christopherlobay/.rbenv/versions/1.9.3-p194-perf/lib/ruby/gems/1.9.1/gems/sass-3.2.5/vendor/listen/lib/listen/adapter.rb:162:in `poll_changed_dirs'
-/Users/christopherlobay/.rbenv/versions/1.9.3-p194-perf/lib/ruby/gems/1.9.1/gems/sass-3.2.5/vendor/listen/lib/listen/adapters/darwin.rb:28:in `block in start'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory - css/stylesheet.scss"; }
-=======
 /* Reset
 /* http://meyerweb.com/eric/tools/css/reset/
 --------------------------------------------------------------- */
@@ -451,4 +428,3 @@ a {
   color: #111; }
 #goodwork .section li {
   text-align: center; }
->>>>>>> new-brand
