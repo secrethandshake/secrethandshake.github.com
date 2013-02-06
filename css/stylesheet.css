@@ -183,8 +183,8 @@ h1, h2 {
   font-weight: bold;
   font-family: "museo-slab",serif; }
 
-h1 strong {
-  color: yellow; }
+h1 span {
+  color: #FFE435; }
 
 h2 {
   color: #999;
@@ -311,7 +311,7 @@ h2 {
 .logo {
   width: 625px;
   height: 595px;
-  margin: -225px auto 24px auto;
+  margin: -225px auto 60px auto;
   display: block;
   background: url("/img/logo-big.png?v=3"); }
 
