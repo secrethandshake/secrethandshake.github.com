@@ -387,6 +387,9 @@ a {
 .button-signup {
   margin: 48px 0 0 0; }
 
+.social-icons {
+  text-align: right; }
+
 #goodwork .next {
   background: #5eb4ff; }
 #goodwork h1 span {
