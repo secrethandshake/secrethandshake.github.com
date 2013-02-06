@@ -197,8 +197,11 @@ a {
   text-decoration: none;
   font-family: "museo-slab",serif;
   text-transform: none;
-  font-weight: bold;
   color: #111;
+}
+.meetup p > a:hover {
+  border-bottom: 2px dashed rgb(216, 193, 42);
+  cursor: help;
 }
 
 .meetup p {

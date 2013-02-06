@@ -338,8 +338,11 @@ a {
   text-decoration: none;
   font-family: "museo-slab",serif;
   text-transform: none;
-  font-weight: bold;
   color: #111; }
+
+.meetup p > a:hover {
+  border-bottom: 2px dashed #d8c12a;
+  cursor: help; }
 
 .meetup p {
   font-size: 30px;
