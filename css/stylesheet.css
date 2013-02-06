@@ -390,7 +390,28 @@ a {
 .social-icons {
   text-align: right; }
 
-<<<<<<< HEAD
+.goodwork-flipper {
+  display: block;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background: url("/img/goodwork-flipper.png");
+  z-index: 999;
+  text-indent: -30000px; }
+
+.sh-flipper {
+  display: block;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background: url("/img/sh-flipper.png");
+  z-index: 999;
+  text-indent: -30000px; }
+
 #goodwork .next {
   background: #5eb4ff; }
 #goodwork h1 span {
@@ -406,15 +427,3 @@ a {
   color: #111; }
 #goodwork .section li {
   text-align: center; }
-=======
-.goodwork-flipper {
-  display: block;
-  width: 150px;
-  height: 150px;
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  background: url("/img/goodwork-flipper.png");
-  z-index: 999;
-  text-indent: -30000px; }
->>>>>>> 918261fb080f5eb35d48b9ac08c7426e2de3f64b
