@@ -2,7 +2,8 @@
 @import '_lib/reset';
 @import '_lib/grid';
 
-@include grid(12, 55px, 24px, true, true);
+// @include grid(12, 55px, 24px, true, true);
+@include grid-fluid(12, 24px, 924px, true, true);
 
 $yellow: #FFE435;
 $blue: #2fd9fd;
@@ -225,7 +226,6 @@ a {
 
 .wrapper {
   padding: 120px 0;
-  min-width: 948px;
   h1, h2, .snark {
     text-align: center;
   }
@@ -338,4 +338,8 @@ a {
       margin-top: 24px;
     }
   }
+}
+
+@media only screen and (max-width: 569px) {
+  @include grid-fluid(12, 24px, 569px, false, true);
 }
