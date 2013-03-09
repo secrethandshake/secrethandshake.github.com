@@ -85,15 +85,18 @@ a {
   clear: both;
   overflow: hidden;
   background: #111;
-  @include breakpoint(6up) {
-    background: #111 url('/img/background.png') center center;
-    background-size: cover;
-  }
   h2 {
     margin: 0;
   }
   .wrapper {
-    padding-top: 520px;
+    padding-top: 280px;
+  }
+  @include breakpoint(6up) {
+    background: #111 url('/img/background.png') center center;
+    background-size: cover;
+    .wrapper {
+      padding-top: 520px;
+    }
   }
 }
 
@@ -335,9 +338,20 @@ img.sponsor-logo {
 #goodwork {
   h1 span { color: $blue; }
   .logo {
-    width: 625px; height: 595px;
+    top: -36px;
+    width: 300px;
+    height: 300px;
+    background-size: 300px 300px;
+    margin-left: -150px;
     display: block;
-    background: url('/img/gw-logo-big.png?v=7');
+    background: url('/img/goodwork-logo.svg') center center no-repeat;
+    @include breakpoint(6up) {
+      top: -70px;
+      width: 580px;
+      height: 580px;
+      background-size: 580px 580px;
+      margin-left: -290px;
+    }
   }
   .next {
     h1 { color: #111; }
