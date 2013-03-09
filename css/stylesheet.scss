@@ -378,6 +378,12 @@ img.sponsor-logo {
   }
 }
 
+iframe {
+  padding: 12px;
+  background: #FFF;
+  @include box-shadow(0px 1px 3px rgba(0,0,0,0.25));
+}
+
 @media only screen and (max-width: 569px) {
   @include grid-fluid(12, 24px, 569px, false, true);
   .wrapper {
