@@ -410,10 +410,13 @@ img.sponsor-logo {
 }
 
 iframe {
-  padding: 12px;
-  background: #FFF;
-  @include box-shadow(0px 1px 3px rgba(0,0,0,0.25));
-  @include box-sizing(border-box);
+    padding: 4px;
+    background: #FFF;
+    @include box-shadow(0px 1px 3px rgba(0,0,0,0.25));
+    @include box-sizing(border-box);
+  @include breakpoint(6up) {
+    padding: 12px;
+  }
 }
 
 @media only screen and (max-width: 569px) {
