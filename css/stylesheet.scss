@@ -298,26 +298,38 @@ img.sponsor-logo {
 
 .goodwork-flipper {
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
   position: fixed;
   top: 0px;
   right: 0px;
   background: url('/img/goodwork-flipper.png');
   z-index: 999;
   text-indent: -30000px;
+  background-size: 75px, 75px;
+  @include breakpoint(6up) {
+    width: 150px;
+    height: 150px;
+    background-size: 150px, 150px;
+  }
 }
 
 .sh-flipper {
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
   position: fixed;
   top: 0px;
   right: 0px;
-  background: url('/img/sh-flipper.png');
+  background: url('/img/sh-flipper.png') no-repeat;
   z-index: 999;
   text-indent: -30000px;
+  background-size: 75px, 75px;
+  @include breakpoint(6up) {
+    width: 150px;
+    height: 150px;
+    background-size: 150px, 150px;
+  }
 }
 
 #goodwork {
@@ -335,7 +347,10 @@ img.sponsor-logo {
     li { text-align: center; }
   }
   .project {
-    text-align: left;
+    text-align: center;
+    @include breakpoint(6up) {
+      text-align: left;
+    }
     a, a:visited {
       color: darken($blue, 15%);
     }
@@ -343,7 +358,6 @@ img.sponsor-logo {
       margin: 0 0 48px 0;
     }
     h2, li {
-      text-align: left;
       color: #222;
     }
     li {
