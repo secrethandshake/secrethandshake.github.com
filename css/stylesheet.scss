@@ -72,6 +72,12 @@ a {
   color: #999;
 }
 
+.wrapper {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  @include box-sizing(border-box);
+}
+
 // SECTIONS //
 .header {
   position: relative;
@@ -349,4 +355,7 @@ a {
 
 @media only screen and (max-width: 569px) {
   @include grid-fluid(12, 24px, 569px, false, true);
+  .wrapper {
+    padding: 60px 0;
+  }
 }
