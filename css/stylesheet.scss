@@ -179,9 +179,13 @@ a {
 
 .logo {
   width: 625px; height: 595px;
-  margin: -225px auto 60px auto;
+  margin: 0 auto 60px auto;
   display: block;
   background: url('/img/logo-big.png?v=3');
+  position: absolute;
+  top: -225px;
+  left: 50%;
+  margin-left: -312px;
 }
 
 .content {
