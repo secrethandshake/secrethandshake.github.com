@@ -82,6 +82,9 @@ a {
   h2 {
     margin: 0;
   }
+  .wrapper {
+    padding-top: 520px;
+  }
 }
 
 .next {
@@ -183,7 +186,7 @@ a {
   display: block;
   background: url('/img/logo-big.png?v=3');
   position: absolute;
-  top: -225px;
+  top: -100px;
   left: 50%;
   margin-left: -312px;
 }
