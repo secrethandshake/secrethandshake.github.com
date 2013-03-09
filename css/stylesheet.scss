@@ -300,4 +300,42 @@ a {
     h1 { color: #111; }
     li { text-align: center; }
   }
+  .project {
+    text-align: left;
+    a, a:visited {
+      color: darken($blue, 15%);
+    }
+    h2, li {
+      text-align: left;
+      color: #222;
+    }
+    li {
+      list-style: disc;
+      margin: 0 0 0 18px;
+      a {
+        color: #666;
+      }
+    }
+    h3 {
+      font-size: 18px;
+      text-transform: uppercase;
+      display: block;
+      margin: 24px 0 24px 0;
+      font-family: "nimbus-sans-extended", sans-serif;
+    }
+    img {
+      max-width: 100%;
+      @include box-sizing(border-box);
+      padding: 11px;
+      border: 1px solid #EEE;
+      display: block;
+      margin: 24px 0 0 0;
+      &:first-child {
+        margin: 0;
+      }
+    }
+    img + .row {
+      margin-top: 24px;
+    }
+  }
 }
