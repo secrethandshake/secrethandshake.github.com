@@ -339,6 +339,9 @@ img.sponsor-logo {
     a, a:visited {
       color: darken($blue, 15%);
     }
+    h1 {
+      margin: 0 0 48px 0;
+    }
     h2, li {
       text-align: left;
       color: #222;
@@ -364,6 +367,7 @@ img.sponsor-logo {
       border: 1px solid #EEE;
       display: block;
       margin: 24px 0 0 0;
+      @include box-shadow(0px 1px 3px rgba(0,0,0,0.05));
       &:first-child {
         margin: 0;
       }
@@ -378,5 +382,15 @@ img.sponsor-logo {
   @include grid-fluid(12, 24px, 569px, false, true);
   .wrapper {
     padding: 60px 0;
+  }
+  #goodwork {
+    .project {
+      img:first-child {
+        margin-top: 24px;
+      }
+      img + .row img:first-child{
+        margin: 0 0 24px 0;
+      }
+    }
   }
 }
