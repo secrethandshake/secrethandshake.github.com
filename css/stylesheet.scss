@@ -170,6 +170,10 @@ a {
   background: #EEE;
   color: #222;
   padding: 60px 0 !important;
+  text-align: center;
+  @include breakpoint(6up) {
+    text-align: left;
+  }
 }
 
 .footer a, .footer p {
@@ -284,7 +288,12 @@ img.sponsor-logo {
 }
 
 .social-icons {
-  text-align: right;
+  text-align: center;
+  padding-top: 2em;
+  @include breakpoint(6up) {
+    padding-top: 0;
+    text-align: right;
+  }
 }
 
 .goodwork-flipper {
