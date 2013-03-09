@@ -215,14 +215,23 @@ img.sponsor-logo {
 }
 
 .logo {
-  width: 625px; height: 595px;
+  width: 300px;
+  height: 300px;
   margin: 0 auto 60px auto;
   display: block;
-  background: url('/img/logo-big.png?v=3');
+  background: url('/img/sh-logo.svg') no-repeat center center;
+  background-size: 300px 300px;
   position: absolute;
-  top: -100px;
+  top: -56px;
   left: 50%;
-  margin-left: -312px;
+  margin-left: -150px;
+  @include breakpoint(6up) {
+      top: -120px;
+      width: 630px;
+      height: 630px;
+      background-size: 630px 630px;
+      margin-left: -315px;
+    }
 }
 
 .content {
@@ -406,11 +415,15 @@ img.sponsor-logo {
     img {
       max-width: 100%;
       @include box-sizing(border-box);
-      padding: 11px;
+      padding: 5px;
       border: 1px solid #EEE;
       display: block;
       margin: 24px 0 0 0;
       @include box-shadow(0px 1px 3px rgba(0,0,0,0.05));
+      @include breakpoint(6up) {
+        padding: 11px;
+        border: 1px solid #EEE;
+      }
       &:first-child {
         margin: 0;
       }
