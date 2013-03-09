@@ -1,6 +1,7 @@
 @import '_lib/bourbon/bourbon';
 @import '_lib/reset';
 @import '_lib/grid';
+@import '_lib/base';
 
 // @include grid(12, 55px, 24px, true, true);
 @include grid-fluid(12, 24px, 924px, true, true);
@@ -83,8 +84,11 @@ a {
   position: relative;
   clear: both;
   overflow: hidden;
-  background: #111 url('/img/background.png') center center;
-  background-size: cover;
+  background: #111;
+  @include breakpoint(6up) {
+    background: #111 url('/img/background.png') center center;
+    background-size: cover;
+  }
   h2 {
     margin: 0;
   }
@@ -102,7 +106,10 @@ a {
 }
 
 .next-gw {
-  background: #2fd9fd url('/img/bluebg.png') center center;
+  background: #2fd9fd;
+  @include breakpoint(6up) {
+    background: #2fd9fd url('/img/bluebg.png') center center;
+  }
 }
 
 .photos {
@@ -184,6 +191,11 @@ a {
 
 .footer a:active {
   color: #5C5213;
+}
+
+img.sponsor-logo {
+  float: left;
+  max-width: 100%;
 }
 
 .logo {
