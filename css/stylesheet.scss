@@ -18,19 +18,28 @@ body {
 
 h1, h2 {
   color: #FFF;
-  font-size: 48px;
-  line-height: 54px;
+  font-size: 36px;
+  line-height: 42px;
   font-weight: bold;
   font-family: "museo-slab",serif;
-  margin: 0 0 32px 0;
+  margin: 0 0 24px 0;
+  @include breakpoint(6up) {
+    font-size: 48px;
+    line-height: 54px;
+    margin: 0 0 32px 0;
+  }
 }
 h1 span { color: $yellow; }
 h2 {
   color: #999;
   font-family: "museo-slab", serif;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 28px;
+  @include breakpoint(6up) {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 
 p, li {
@@ -85,15 +94,18 @@ a {
   clear: both;
   overflow: hidden;
   background: #111;
-  @include breakpoint(6up) {
-    background: #111 url('/img/background.png') center center;
-    background-size: cover;
-  }
   h2 {
     margin: 0;
   }
   .wrapper {
-    padding-top: 520px;
+    padding-top: 280px;
+  }
+  @include breakpoint(6up) {
+    background: #111 url('/img/background.png') center center;
+    background-size: cover;
+    .wrapper {
+      padding-top: 520px;
+    }
   }
 }
 
@@ -108,7 +120,7 @@ a {
 .next-gw {
   background: #2fd9fd;
   @include breakpoint(6up) {
-    background: #2fd9fd url('/img/bluebg.png') center center;
+    background: #2fd9fd url('/img/bluebg.jpg') center center;
   }
 }
 
@@ -335,9 +347,20 @@ img.sponsor-logo {
 #goodwork {
   h1 span { color: $blue; }
   .logo {
-    width: 625px; height: 595px;
+    top: -36px;
+    width: 300px;
+    height: 300px;
+    background-size: 300px 300px;
+    margin-left: -150px;
     display: block;
-    background: url('/img/gw-logo-big.png?v=7');
+    background: url('/img/goodwork-logo.svg') center center no-repeat;
+    @include breakpoint(6up) {
+      top: -70px;
+      width: 580px;
+      height: 580px;
+      background-size: 580px 580px;
+      margin-left: -290px;
+    }
   }
   .next {
     h1 { color: #111; }
@@ -356,6 +379,9 @@ img.sponsor-logo {
     }
     a, a:visited {
       color: darken($blue, 15%);
+    }
+    p {
+      text-align: left;
     }
     h1 {
       margin: 0 0 32px 0;
@@ -396,16 +422,19 @@ img.sponsor-logo {
 }
 
 iframe {
-  padding: 12px;
-  background: #FFF;
-  @include box-shadow(0px 1px 3px rgba(0,0,0,0.25));
-  @include box-sizing(border-box);
+    padding: 4px;
+    background: #FFF;
+    @include box-shadow(0px 1px 3px rgba(0,0,0,0.25));
+    @include box-sizing(border-box);
+  @include breakpoint(6up) {
+    padding: 12px;
+  }
 }
 
 @media only screen and (max-width: 569px) {
   @include grid-fluid(12, 24px, 569px, false, true);
   .wrapper {
-    padding: 60px 0;
+    padding: 40px 0;
   }
   #goodwork {
     .project {
