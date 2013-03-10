@@ -209,6 +209,13 @@ a {
   color: #5C5213;
 }
 
+a.nmm-link {
+  padding-left: 0px;
+  @include breakpoint(6up) {
+    padding-left: 12px;
+  }
+}
+
 img.sponsor-logo {
   float: left;
   max-width: 100%;
