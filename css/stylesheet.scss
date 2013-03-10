@@ -210,8 +210,11 @@ a {
 }
 
 a.nmm-link {
+  display: block;
   padding-left: 0px;
+  margin-top: 1em;
   @include breakpoint(6up) {
+    margin-top: 0;
     padding-left: 12px;
   }
 }
