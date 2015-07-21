@@ -1,27 +1,50 @@
 # Secret Handshake
 
-A monthly gathering of creative professionals in Winnipeg, Manitoba, Canada.
+[![forthebadge](http://forthebadge.com/images/badges/powered-by-netflix.svg)](http://forthebadge.com)
 
-[http://secrethandshake.ca](http://secrethandshake.ca "http://secrethandshake.ca")
+### Getting Started
 
-## Local Development
+Clone the repo using `git clone` or by clicking the *Download ZIP* button to the right.
 
-The following assumes you are on a Mac and you have `ruby` and the `sass` gem installed.
+```sh
+git clone https://github.com/jadnco/secrethandshake.github.com.git
+```
 
-First, run SASS: 
+Navigate to the directory to where it was cloned.
 
-    sass --watch ./css --style compressed -r ./css/_lib/bourbon/lib/bourbon.rb
+```sh
+cd secrethandshake.github.com
+```
 
-And then run the server:
+Install all dependencies using npm:
 
-    ruby server.rb
+```sh
+npm install
+```
 
-You can then view the website at `http://localhost:3000` in your web browser of choice.
+Run the default Gulp task to get started:
 
-Good luck!
+```sh
+gulp
+```
 
-## Authors
+BrowserSync will automagically inject any changes you make to the stylesheets. You can view the website at one of the given access URLs:
 
-* Christopher Lobay
-* Ian Mortier
-* Leanne Havelock
+```sh
+[BS] Access URLs:
+ ----------------------------------
+       Local: http://localhost:3000
+    External: http://10.0.X.XX:3000
+ ----------------------------------
+```
+
+If you are working within a GitHub repo you can deploy your project, at any time, to a `gh-pages` branch by running:
+
+```sh
+gulp deploy
+```
+
+### Credits
+
+- Image by [Alex Wigan](https://unsplash.com/alwig64)
+
