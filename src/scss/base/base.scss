@@ -35,6 +35,16 @@ h1 {
   font-weight: bold;
 }
 
+h2 {
+  font: font(x-large);
+  font-weight: bold;
+}
+
+h3 {
+  font: font(large);
+  font-weight: bold;
+}
+
 .cf {
   &:after {
     content: '';
@@ -47,12 +57,17 @@ h1 {
   clear: both;
 
   &:not(:first-of-type) {
-    margin-top: ws(large);
+    margin-top: ws(xxx-large);
   }
 
   .inner {
     padding: ws(xx-large) ws(large);
     background: color(light);
+  }
+
+  .section-title {
+    position: absolute;
+    top: - ws(large);
   }
 }
 
