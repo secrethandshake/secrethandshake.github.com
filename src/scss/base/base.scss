@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  //outline: 1px dashed rgba(black, 0.1);
 }
 
 ::selection {
@@ -16,9 +17,9 @@ body {
 
 body {
   font: font(default);
+
   color: color(black);
-  background: color(pearl);
-}
+  background: color(white);}
 
 a {
   color: inherit;
@@ -29,10 +30,74 @@ a {
   }
 }
 
+h1 {
+  font: font(xx-large);
+  font-weight: bold;
+}
+
 .cf {
   &:after {
     content: '';
     display: table;
     clear: both;
+  }
+}
+
+.sec {
+  clear: both;
+
+  &:not(:first-of-type) {
+    margin-top: ws(large);
+  }
+
+  .inner {
+    padding: ws(xx-large) ws(large);
+    background: color(light);
+  }
+}
+
+.btn {
+  display: inline-block;
+  background: none;
+  border: 2px solid color(black);
+  border-radius: 4px;
+  transition: background 0.1s;
+  
+  &:hover {
+    background: rgba(color(black), 0.1);
+  }
+
+  &.btn-small {
+    padding: ws(xx-small) ws(x-small);
+  }
+
+  &.btn-large {
+    padding: ws(x-small) ws(small);
+
+    &.btn-chevron {
+      padding-right: ws(x-medium);
+
+      &:after {
+        top: 16px;
+      }
+    }
+  }
+
+  &.btn-chevron {
+    position: relative;
+    padding-right: ws(medium);
+
+    &:after {
+      content: "";
+      background: url(../images/chevron-right.svg);
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      margin-left: ws(x-small);
+      display: inline-block;
+      position: absolute;
+      height: 12px;
+      width: 7px;
+      top: 10px;
+    }
   }
 }

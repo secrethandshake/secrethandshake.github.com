@@ -1,0 +1,27 @@
+#testimonials {
+  .inner {
+    background: color(yellow);
+  }
+
+  blockquote {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+    &:before {
+      content: "“";
+      font: font(xxx-large);
+      position: absolute;
+      text-align: center;
+      top: - ws(medium);
+      left: 0;
+      right: 0;
+      opacity: 0.1;
+      z-index: -1;
+    }
+
+    .author {
+      margin-top: ws(medium);
+    }
+  }
+}

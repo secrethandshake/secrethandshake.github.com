@@ -1,0 +1,31 @@
+#email-signup {
+  position: relative;
+  margin-top: - ws(xx-large);
+  z-index: 9;
+  
+  .inner {
+    background: none;
+    padding: none !important;
+  }
+
+  .seven.columns {
+    background: color(yellow);
+    padding: ws(medium);
+    //position: relative;
+    display: block;
+  }
+
+  form {
+    margin-top: ws(medium);
+
+    input {
+      font: font(default);
+      padding: ws(xx-small) ws(x-small);
+      outline: none;
+      border-radius: 3px;
+      border: 2px solid darken(color(yellow), 20%);
+      background: darken(color(yellow), 10%);
+      -webkit-appearance: none;
+    }
+  }
+}

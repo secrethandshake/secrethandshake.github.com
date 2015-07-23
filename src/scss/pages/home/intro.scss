@@ -1,0 +1,10 @@
+#intro {
+  margin-top: - ws(xx-large);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+
+  .inner {
+    border-top: ws(xx-large) solid color(light);
+  }
+}

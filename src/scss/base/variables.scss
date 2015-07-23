@@ -1,27 +1,31 @@
-$font-family: Proxima Nova, San Francisco, Helvetica Neue, sans-serif;
+$font-family: europa, San Francisco, sans-serif;
 
 $colors: (
-  white: #FFFFFF, 
-  pearl: #F9FBFB,
-  light: #E6F0F0,
+  white: #FFFFFF,
+  light: #F1F3F9,
   grey: #A0999E,
-  black: #302D2F,
-  plum: #8E4585,
-  green: #579F46,
-  red: #9F4646
+  black: #383C41,
+  yellow: #ffe435
 );
 
 $whitespace: (
-  huge: 6rem,
+  xxx-large: 8rem,
+  xx-large: 5rem,
+  x-large: 4rem,
   large: 3rem,
+  x-medium: 2.15rem,
   medium: 2rem,
-  small: 0.8rem,
-  tiny: 0.4rem
+  small: 1.2rem,
+  x-small: 0.7rem,
+  xx-small: 0.25rem
 );
 
 $font-size: (
-  default: 16px/1.4,
+  default: 24px/1.35,
+  xxx-large: 18rem/0.9,
+  xx-large: 8rem/1.05,
+  x-large: 5rem/1.0,
   large: 3rem/1.0,
   medium: 1.6rem/1.2,
-  tiny: 0.5rem/1.4
+  tiny: 0.8rem/1.0
 );

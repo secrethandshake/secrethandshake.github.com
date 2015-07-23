@@ -1,0 +1,23 @@
+#hero {
+  margin-top: ws(x-large);
+  
+  .nine.columns {
+    background: color(yellow);
+    padding: ws(medium);
+    position: relative;
+    z-index: 9;
+  }
+
+  .three.columns {
+    position: absolute;
+    opacity: 0.1;
+    margin-top: ws(xxx-large);
+    z-index: 4;
+
+    img {
+      width: 100%;
+      height: auto;
+      transform: rotate(20deg);
+    }
+  }
+}
