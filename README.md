@@ -7,13 +7,13 @@
 Clone the repo using `git clone` or by clicking the *Download ZIP* button to the right.
 
 ```sh
-git clone https://github.com/jadnco/secrethandshake.github.com.git
+git clone https://github.com/jadnco/secrethandshake.git
 ```
 
 Navigate to the directory to where it was cloned.
 
 ```sh
-cd secrethandshake.github.com
+cd secrethandshake
 ```
 
 Install all dependencies using npm:
