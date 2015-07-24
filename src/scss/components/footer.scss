@@ -6,4 +6,21 @@
     color: color(grey);
     padding-top: ws(xx-large);
   }
+
+  ul.social {
+    list-style: none;
+    text-align: center;
+    margin-bottom: ws(medium);
+
+    li {
+      display: inline-block;
+      text-align: left;
+      color: color(black);
+      font: font(medium) !important;
+
+      &:not(:first-of-type) {
+        margin-left: ws(medium);
+      }
+    }
+  }
 }
