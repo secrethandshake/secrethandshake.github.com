@@ -1,9 +1,20 @@
 #next-meetup {
   .inner {
     border-bottom: ws(xx-large) solid color(light);
+    padding-top: ws(xxx-large);
+    text-align: center;
   }
 
   .section-title {
     color: color(yellow);
+  }
+
+  .date {
+    margin-top: ws(large);
+  }
+
+  .sign-up {
+    display: inline-block;
+    margin-top: ws(large);
   }
 }

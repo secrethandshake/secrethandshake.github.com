@@ -57,7 +57,7 @@ h3 {
   clear: both;
 
   &:not(:first-of-type) {
-    margin-top: ws(xxx-large);
+    margin-top: ws(xxxx-large);
   }
 
   .inner {
@@ -68,12 +68,14 @@ h3 {
   .section-title {
     position: absolute;
     top: - ws(large);
+    z-index: 9;
   }
 }
 
 .btn {
   display: inline-block;
   background: none;
+  padding: ws(x-small) ws(medium);
   border: 2px solid color(black);
   border-radius: 4px;
   transition: background 0.1s;
@@ -82,37 +84,21 @@ h3 {
     background: rgba(color(black), 0.1);
   }
 
-  &.btn-small {
-    padding: ws(xx-small) ws(x-small);
-  }
-
-  &.btn-large {
-    padding: ws(x-small) ws(small);
-
-    &.btn-chevron {
-      padding-right: ws(x-medium);
-
-      &:after {
-        top: 16px;
-      }
-    }
-  }
-
   &.btn-chevron {
     position: relative;
-    padding-right: ws(medium);
+    padding-right: ws(large);
 
     &:after {
       content: "";
       background: url(../images/chevron-right.svg);
       background-repeat: no-repeat;
       background-size: auto 100%;
-      margin-left: ws(x-small);
+      margin-left: ws(x-small) + 0.3rem;
       display: inline-block;
       position: absolute;
-      height: 12px;
-      width: 7px;
-      top: 10px;
+      height: 16px;
+      width: 10px;
+      top: ws(small) + 0.1rem;
     }
   }
 }

@@ -1,10 +1,16 @@
 #photos {
+  .inner {
+    padding: 0;
+  }
+
   .section-title {
     color: color(yellow);
+    margin-left: ws(large);
   }
 
   img {
     width: 100%;
     height: auto;
+    display: block;
   }
 }
