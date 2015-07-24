@@ -166,6 +166,64 @@ function eventCache() {
   }
 }
 
+function Testimonials(interval, fadeDuration) {
+  var self = this;
+
+  self.quotes = [
+    {
+      quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ipsum justo, eget condimentum nulla mollis sagittis.",
+      author: "Laura Collins",
+      title: "Web Designer"
+    },
+    {
+      quote: "Atqui reperies, inquit, in hoc quidem pertinacem.",
+      author: "Ann Campbell",
+      title: "Illustrator"
+    },
+    {
+      quote: "Vestibulum vitae ullamcorper turpis, vitae euismod turpis. Suspendisse interdum nibh in ipsum euismod, et feugiat ante convallis.",
+      author: "Daniel Bradley",
+      title: "Photographer"
+    },
+    {
+      quote: "Etiam dictum sagittis magna aliquet suscipit.",
+      author: "Douglas Reed",
+      title: "Graphic Artist"
+    }
+  ];
+
+  self.current = 0;
+  self.totalQuotes = self.quotes.length;
+
+  self.showQuote = function(index) {
+    $('#testimonials blockquote').fadeOut(fadeDuration, function() {
+      $('#testimonials .quote').text('"' + self.quotes[index].quote + '"');
+      $('#testimonials .author').text(self.quotes[index].author);
+
+      $('#testimonials blockquote').fadeIn(fadeDuration);
+    });
+  };
+
+  self.nextQuote = function() {
+    self.current++;
+
+    // Reset to 0
+    if (self.current > self.totalQuotes - 1) {
+      self.current = 0;
+    }
+
+    self.showQuote(self.current);
+  };
+
+  // Show the first quote
+  self.showQuote(0);
+
+  // Cycle through the quotes based on interval
+  setInterval(function() {
+    self.nextQuote();
+  }, interval);
+}
+
 
 $(document).ready(function(){
   eventCache();
@@ -174,10 +232,13 @@ $(document).ready(function(){
 
   $('.photos-content').on('scroll', function(){
     var sl = $(this).scrollLeft() * -pcw;
-    $('.photos-bg').css("left", "" + sl + "px")
+    $('.photos-bg').css("left", "" + sl + "px");
   });
 
   var one = "hello", two = "secrethandshake", three = "@", four = "mail";
   // $('#goodwork .next .col12').append('<a class="button button-signup" href="' + four + 'to:'+one+three+two+'.ca" title="Sign Up Now">Sign Up Now</a>');
   $('.social-icons').prepend('<a href="' + four + 'to:'+one+three+two+'.ca" title="Email"><img src="/img/email.png" /></a>');
+
+  // Create new instance of testimonials
+  var t = new Testimonials(6000, 400);
 });
