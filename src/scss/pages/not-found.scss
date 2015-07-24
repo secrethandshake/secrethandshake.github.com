@@ -1,0 +1,26 @@
+#not-found {
+  margin-top: ws(xxx-large);
+
+  .inner {
+    padding: 0;
+    background: none;
+  }
+
+  .cat {
+    background-image: linear-gradient(rgba(color(light), 0.3), rgba(color(light), 0.3)),
+    url(../images/cat-jump.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 400px;
+    margin-left: 0;
+  }
+
+  h1 {
+    position: absolute;
+    top: - ws(x-large);
+    margin-left: ws(large);
+    color: color(yellow);
+    z-index: 9;
+  }
+}
