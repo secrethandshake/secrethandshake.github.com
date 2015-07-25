@@ -89,15 +89,14 @@
   </div>
 </section>
 
-<section id="email-signup">
+<section id="slack">
   <div class="inner">
     <div class="seven columns offset-by-four">
-      <h3>Email Newsletter</h3>
-      <div>Sign-up for exclusive offerings and shit.</div>
-      <form>
-        <input type="text" placeholder="Name" class="five columns">
-        <input type="email" placeholder="Email" class="five columns">
-        <input type="submit" value="&rarr;" class="two columns">
+      <h3>Slack Chat</h3>
+      <div>Add your email to reveive an invite to our Slack group.</div>
+      <form method="post" action="/invite">
+        <input type="email" name="email" placeholder="Email" class="nine columns">
+        <input type="submit" value="Send" class="three columns">
 
         <!-- div class="error">Please enter your email.</div -->
       </form>

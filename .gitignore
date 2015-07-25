@@ -9,3 +9,5 @@ dist/*
 partials/*
 !src/**/*.hbs
 assets/*
+
+slackConfig.js

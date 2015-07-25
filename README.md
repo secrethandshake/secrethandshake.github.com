@@ -4,6 +4,8 @@
 
 ### Getting Started
 
+Make sure you have [Node.js]() installed.
+
 Clone the repo using `git clone` or by clicking the *Download ZIP* button to the right.
 
 ```sh
@@ -20,6 +22,12 @@ Install all dependencies using npm:
 
 ```sh
 npm install
+```
+
+Run the start command (make sure you run this before `gulp`, otherwise you will run into errors):
+
+```sh
+npm start
 ```
 
 Run the default Gulp task to get started:
