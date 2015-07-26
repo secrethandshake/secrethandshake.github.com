@@ -1,21 +1,20 @@
 #slack {
-  position: relative;
-  margin-top: - ws(xx-large);
-  z-index: 9;
-  
+  background: color(yellow);
+
   .inner {
     background: none;
     padding: none !important;
+    //text-align: center;
   }
 
   .seven.columns {
     background: color(yellow);
-    padding: ws(medium);
+    padding: ws(x-large) ws(x-small);
     display: block;
   }
 
   form {
-    margin-top: ws(medium);
+    margin-top: ws(large);
 
     .error {
       display: inline-block;
@@ -59,6 +58,33 @@
         background: color(black);
         color: color(yellow);
         border-color: color(black);
+        margin-top: ws(medium);
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  #slack {
+    background: none;
+    position: relative;
+    margin-top: - ws(xx-large);
+    z-index: 9;
+    
+    .inner {
+      text-align: left;
+    }
+
+    .seven.columns {
+      padding: ws(medium);
+    }
+
+    form {
+      margin-top: ws(medium);
+      input {
+        &[type=submit] {
+          margin-top: 0;
+        }
       }
     }
   }

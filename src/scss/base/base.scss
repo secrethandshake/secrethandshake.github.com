@@ -30,19 +30,44 @@ a {
   }
 }
 
+h1,
+h2,
+h3 {
+  font-weight: bold !important;
+}
+
 h1 {
-  font: font(xx-large);
-  font-weight: bold;
+  font: font(large);
 }
 
 h2 {
-  font: font(x-large);
-  font-weight: bold;
+  font: font(large);
 }
 
 h3 {
-  font: font(large);
-  font-weight: bold;
+  font: font(x-medium);
+}
+
+// For tablets
+@media (min-width: 750px) {
+  h1 {
+    font: font(x-large);
+  }
+}
+
+// For larger screens
+@media (min-width: 1000px) {
+  h1 {
+    font: font(xx-large);
+  }
+
+  h2 {
+    font: font(x-large);
+  }
+
+  h3 {
+    font: font(large);
+  }
 }
 
 .cf {
@@ -54,19 +79,51 @@ h3 {
 }
 
 .sec {
+  background: color(light);
+
   &:not(:first-of-type) {
-    margin-top: ws(xxxx-large);
+    margin-top: ws(xxx-large);
   }
 
   .inner {
-    padding: ws(xxx-large) ws(large) ws(xx-large) ws(large);
+    padding: ws(x-large) ws(x-small) ws(x-large) ws(x-small);
     background: color(light);
   }
 
   .section-title {
+    text-align: center;
+    left: 0;
+    right: 0;
     position: absolute;
-    top: - ws(large);
+    top: - ws(x-medium);
     z-index: 9;
+  }
+
+  @media (min-width: 750px) {
+    .inner {
+      padding: ws(xxx-large) ws(small) ws(xx-large) ws(small);
+    }
+  }
+
+  @media (min-width: 1000px) {
+    & {
+      background: none;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: ws(xxxx-large);
+    }
+
+    .inner {
+      padding: ws(xxx-large) ws(large) ws(xx-large) ws(large);
+      background: color(light);
+    }
+
+    .section-title {
+      top: - ws(large);
+      text-align: left;
+      margin-left: ws(large);
+    }
   }
 }
 

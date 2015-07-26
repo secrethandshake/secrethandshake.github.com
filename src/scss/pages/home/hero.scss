@@ -1,23 +1,59 @@
 #hero {
-  margin-top: ws(x-large);
-  
+  background: color(yellow);
+
+  .inner {
+    padding: ws(medium) ws(x-small) ws(medium) ws(x-small);
+  }
+
   .nine.columns {
     background: color(yellow);
-    padding: ws(medium);
     position: relative;
     z-index: 9;
   }
 
   .three.columns {
-    position: absolute;
-    opacity: 0.1;
-    margin-top: ws(xxx-large);
-    z-index: 4;
+    display: none;
+  }
+}
 
-    img {
-      width: 100%;
-      height: auto;
-      transform: rotate(12deg);
+// Larger than tablet
+@media (min-width: 750px) {
+  #hero {
+    .inner {
+      padding-top: ws(x-large);
+      padding-bottom: ws(x-large);
+    }
+  }
+}
+
+// For larger screens
+@media (min-width: 1000px) {
+  #hero {
+    background: none;
+    margin-top: ws(x-large);
+
+    .inner {
+      padding: 0;
+    }
+    
+    .nine.columns {
+      background: color(yellow);
+      padding: ws(medium);
+      position: relative;
+      z-index: 9;
+    }
+
+    .three.columns {
+      position: absolute;
+      opacity: 0.1;
+      margin-top: ws(xxx-large);
+      z-index: 4;
+
+      img {
+        width: 100%;
+        height: auto;
+        transform: rotate(12deg);
+      }
     }
   }
 }

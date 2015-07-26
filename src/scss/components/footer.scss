@@ -19,8 +19,28 @@
       font: font(medium) !important;
 
       &:not(:first-of-type) {
-        margin-left: ws(medium);
+        margin-left: ws(small);
       }
     }
   }
+
+  .sponsor {
+    margin-top: ws(small);
+  }
+}
+
+@media (min-width: 1000px) {
+  #main-footer {
+    ul.social {
+      li {
+        &:not(:first-of-type) {
+          margin-left: ws(medium);
+        }
+      }
+    }
+
+    .sponsor {
+      margin-top: 0;
+    }
+  } 
 }

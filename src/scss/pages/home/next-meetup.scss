@@ -1,7 +1,6 @@
 #next-meetup {
   .inner {
-    border-bottom: ws(xx-large) solid color(light);
-    text-align: center;
+    text-align: left;
   }
 
   .section-title {
@@ -16,4 +15,21 @@
     display: inline-block;
     margin-top: ws(large);
   }
+}
+
+@media (min-width: 750px) {
+  #next-meetup {
+    .inner {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  #next-meetup {
+    .inner {
+      text-align: center;
+      border-bottom: ws(xx-large) solid color(light);
+    }
+  }  
 }
