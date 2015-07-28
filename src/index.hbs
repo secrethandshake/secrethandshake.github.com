@@ -6,17 +6,17 @@
     <div class="row">
       <div class="nine columns offset-by-one">
         <h1>Secret Handshake</h1>
-        <svg id="stripes">
+        <svg id="hero-stripes" class="stripes">
           <defs>
-            <pattern id="pattern" width="10" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <pattern id="hero-pattern" width="10" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
               <rect width="3" height="3" fill="white">
             </pattern>
-            <mask id="mask">
-              <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern)">
+            <mask id="hero-mask">
+              <rect x="0" y="0" width="100%" height="100%" fill="url(#hero-pattern)">
             </mask>      
           </defs>
 
-          <rect id="shape" x="0" y="0" width="100%" height="100%"></rect>
+          <rect class="shape" x="0" y="0" width="100%" height="100%"></rect>
         </svg>
       </div>
       <div class="three columns offset-by-nine"><img src="images/logo-dark.svg"></div>
@@ -27,7 +27,15 @@
 <section id="intro" class="sec">
   <div class="inner">
     <div class="row">
-      <div class="eight columns center">Secret Handshake is a monthly gathering of creative people.<br>Join us for new friendships and good conversation.</div>
+      <div class="twelve columns center">Secret Handshake is a monthly gathering of creative people.<br>Join us for new friendships and good conversation.</div>
+    </div>
+  </div>
+</section>
+
+<section id="photos" class="sec">
+  <div class="inner">
+    <div class="row">
+      <img src="images/meetup-shot-1.jpg">
     </div>
   </div>
 </section>
@@ -66,15 +74,6 @@
   </div>
 </section>
 
-<section id="photos" class="sec">
-  <div class="inner">
-    <h2 class="section-title">Photos</h2>
-    <div class="row">
-      <img src="images/meetup-shot-1.jpg">
-    </div>
-  </div>
-</section>
-
 <section id="testimonials" class="sec">
   <div class="inner">
     <h2 class="section-title">Testimonials</h2>
@@ -91,7 +90,7 @@
 
 <section id="next-meetup" class="sec">
   <div class="inner">
-    <h2 class="section-title">Next one</h2>
+    <h2 class="section-title">Upcoming</h2>
     <div class="row">
       <div class="eight columns center meetup">
         <h3>Secret Handshake #62</h3>
@@ -107,13 +106,26 @@
   <div class="inner">
     <div class="seven columns offset-by-four">
       <h3>Slack Chat</h3>
-      <div>Add your email to reveive an invite to our Slack group.</div>
+      <div>Sign-up to reveive an invite to our Slack group.</div>
       <form method="post" action="/invite">
         <input type="email" name="email" placeholder="Email" class="nine columns">
         <input type="submit" value="Send" class="three columns">
 
         <!-- div class="error">Please enter your email.</div -->
       </form>
+
+      <svg class="stripes">
+        <defs>
+          <pattern id="slack-pattern" width="10" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <rect width="3" height="3" fill="white">
+          </pattern>
+          <mask id="slack-mask">
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#slack-pattern)">
+          </mask>
+        </defs>
+
+        <rect class="shape" x="0" y="0" width="100%" height="100%"></rect>
+      </svg>
     </div>
   </div>
 </section>

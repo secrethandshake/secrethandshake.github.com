@@ -79,14 +79,12 @@ h3 {
 }
 
 .sec {
-  background: color(light);
-
   &:not(:first-of-type) {
     margin-top: ws(xxx-large);
   }
 
   .inner {
-    padding: ws(x-large) ws(x-small) ws(x-large) ws(x-small);
+    padding: ws(x-large) ws(medium);
     background: color(light);
   }
 

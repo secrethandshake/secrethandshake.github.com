@@ -21,14 +21,6 @@
   #next-meetup {
     .inner {
       text-align: center;
-    }
-  }
-}
-
-@media (min-width: 1000px) {
-  #next-meetup {
-    .inner {
-      text-align: center;
       border-bottom: ws(xx-large) solid color(light);
     }
   }  

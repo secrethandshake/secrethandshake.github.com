@@ -232,8 +232,8 @@ $.fn.parallax = function(e) {
         y: Math.floor(event.pageY)
       },
       translation = {
-        x: -20 + (mouse.x * -0.02),
-        y: +20 + (mouse.y * -0.02) 
+        x: -34 + (mouse.x * -0.02),
+        y: -34 + (mouse.y * -0.02) 
       };
 
   $(self).css({
@@ -264,6 +264,6 @@ $(document).ready(function(){
 
 $(window).on("mousemove", function() {
   if ($(this).width() >= 1200) {
-    $("#hero #stripes").parallax();
+    $("#hero #hero-stripes").parallax();
   }
 });

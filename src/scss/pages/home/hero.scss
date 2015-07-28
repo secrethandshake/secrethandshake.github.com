@@ -1,16 +1,14 @@
 #hero {
-  background: color(yellow);
-
   .inner {
-    padding: ws(medium) ws(x-small) ws(medium) ws(x-small);
+    background: color(yellow);
+    padding: ws(medium);
   }
 
   .nine.columns {
     background: color(yellow);
     position: relative;
-    //z-index: 9;
 
-    #stripes {
+    #hero-stripes {
       display: none;
     }
   }
@@ -20,42 +18,32 @@
   }
 }
 
-// Larger than tablet
 @media (min-width: 750px) {
   #hero {
-    .inner {
-      padding-top: ws(x-large);
-      padding-bottom: ws(x-large);
-    }
-  }
-}
-
-// For larger screens
-@media (min-width: 1000px) {
-  #hero {
-    background: none;
     margin-top: ws(x-large);
 
     .inner {
       padding: 0;
+      background: none;
     }
     
     .nine.columns {
       padding: ws(medium);
 
-      #stripes {
+      #hero-stripes {
         display: block;
         position: absolute;
-        transform: translate3d(- ws(small), ws(small), 0);
+        transform: translate3d(- ws(small), - ws(small), 0);
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         z-index: -1;
+        box-sizing: border-box;
 
-        #shape {
+        .shape {
           fill: color(black);
-          mask: url(#mask);
+          mask: url(#hero-mask);
         }
       }
     }
@@ -72,6 +60,14 @@
         height: auto;
         transform: rotate(12deg);
       }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  #hero {
+    #hero-stripes {
+      transform: translate3d(- ws(medium), - ws(medium), 0);
     }
   }
 }

@@ -6,16 +6,7 @@
   }
 }
 
-
 @media (min-width: 750px) {
-  #intro {
-    .inner {
-      padding-top: ws(xx-large);
-    }
-  }
-}
-
-@media (min-width: 1000px) {
   #intro {
     text-align: center;
     margin-top: - ws(xx-large);
@@ -26,5 +17,11 @@
       border-top: ws(xx-large) solid color(light);
       padding-top: ws(xx-large);
     }
+  }
+}
+
+@media (min-width: 1000px) {
+  #intro {
+    text-align: center;
   }
 }

@@ -1,16 +1,19 @@
 #slack {
-  background: color(yellow);
+  //background: color(yellow);
 
   .inner {
     background: none;
     padding: none !important;
-    //text-align: center;
   }
 
   .seven.columns {
     background: color(yellow);
-    padding: ws(x-large) ws(x-small);
+    padding: ws(x-large) ws(medium);
     display: block;
+
+    .stripes {
+      display: none;
+    }
   }
 
   form {
@@ -64,7 +67,7 @@
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 750px) {
   #slack {
     background: none;
     position: relative;
@@ -76,16 +79,46 @@
     }
 
     .seven.columns {
+      position: relative;
       padding: ws(medium);
-    }
 
-    form {
-      margin-top: ws(medium);
-      input {
-        &[type=submit] {
-          margin-top: 0;
+      .stripes {
+        display: block;
+        position: absolute;
+        transform: translate3d(ws(small), - ws(small), 0);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        .shape {
+          fill: color(black);
+          mask: url(#slack-mask);
+        }
+      }
+
+      form {
+        margin-top: ws(medium);
+        
+        input {
+          &[type=submit] {
+            margin-top: 0;
+          }
         }
       }
     }
   }
+}
+
+@media (min-width: 1000px) {
+    #slack {
+      .seven.columns {
+        .stripes {
+          display: block;
+          position: absolute;
+          transform: translate3d(ws(medium), - ws(medium), 0);
+        }
+      }
+    }
 }
