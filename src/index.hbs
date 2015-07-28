@@ -6,6 +6,18 @@
     <div class="row">
       <div class="nine columns offset-by-one">
         <h1>Secret Handshake</h1>
+        <svg id="stripes">
+          <defs>
+            <pattern id="pattern" width="10" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <rect width="3" height="3" fill="white">
+            </pattern>
+            <mask id="mask">
+              <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern)">
+            </mask>      
+          </defs>
+
+          <rect id="shape" x="0" y="0" width="100%" height="100%"></rect>
+        </svg>
       </div>
       <div class="three columns offset-by-nine"><img src="images/logo-dark.svg"></div>
     </div>

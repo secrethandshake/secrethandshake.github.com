@@ -224,6 +224,25 @@ function Testimonials(interval, fadeDuration) {
   }, interval);
 }
 
+$.fn.parallax = function(e) {
+  var self = this,
+      event = event || window.event,
+      mouse = {
+        x: Math.floor(event.pageX),
+        y: Math.floor(event.pageY)
+      },
+      translation = {
+        x: -20 + (mouse.x * -0.02),
+        y: +20 + (mouse.y * -0.02) 
+      };
+
+  $(self).css({
+    "-webkit-transform": "translate3d(" + translation.x + "px," + translation.y + "px,0px)",
+    "-moz-transform":    "translate3d(" + translation.x + "px," + translation.y + "px,0px)",
+    "transform":         "translate3d(" + translation.x + "px," + translation.y + "px,0px)"
+  });
+};
+
 
 $(document).ready(function(){
   eventCache();
@@ -241,4 +260,10 @@ $(document).ready(function(){
 
   // Create new instance of testimonials
   var t = new Testimonials(6000, 400);
+});
+
+$(window).on("mousemove", function() {
+  if ($(this).width() >= 1200) {
+    $("#hero #stripes").parallax();
+  }
 });
