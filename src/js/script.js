@@ -229,7 +229,7 @@ function Slideshow(interval, fadeDuration) {
 
   self.location = "images/photos/";
   self.ext = ".jpeg";
-  self.limit = 5;
+  self.limit = 8;
 
   self.current = 1;
 
