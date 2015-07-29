@@ -110,15 +110,3 @@
     }
   }
 }
-
-@media (min-width: 1000px) {
-    #slack {
-      .seven.columns {
-        .stripes {
-          display: block;
-          position: absolute;
-          transform: translate3d(ws(medium), - ws(medium), 0);
-        }
-      }
-    }
-}

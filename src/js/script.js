@@ -224,16 +224,69 @@ function Testimonials(interval, fadeDuration) {
   }, interval);
 }
 
+function Slideshow(interval, fadeDuration) {
+  var self = this;
+
+  self.location = "images/photos/";
+  self.ext = ".jpeg";
+  self.limit = 5;
+
+  self.current = 1;
+
+  self.pushToList = function() {
+    $("#photos #images").html('');
+
+    for (var i = 1; i <= self.limit; i++) {  
+      $("#photos #images").append("<li><img src='" + self.location + i + self.ext + "'></li>");
+    }
+  };
+
+  self.showSlide = function() {
+
+    $('#photos #images li').each(function(k, v) {
+      if ($(this).hasClass('current')) {
+        $(this).removeClass('current');
+      }
+
+      if (k + 1 === self.current) {
+        $(this).addClass('current');
+
+        // Break out of loop
+        //return false;
+      }
+    });
+  };
+
+  self.nextSlide = function() {
+    self.current++;
+
+    // Reset to 1
+    if (self.current > self.limit) {
+      self.current = 1;
+    }
+
+    self.showSlide();
+  };
+
+  self.pushToList();
+
+  self.showSlide(1);
+
+  setInterval(function() {
+    self.nextSlide();
+  }, interval);
+}
+
 $.fn.parallax = function(e) {
   var self = this,
       event = event || window.event,
       mouse = {
-        x: Math.floor(event.pageX),
-        y: Math.floor(event.pageY)
+        x: event.pageX,
+        y: event.pageY
       },
       translation = {
-        x: -34 + (mouse.x * -0.02),
-        y: -34 + (mouse.y * -0.02) 
+        x: -20 + (mouse.x * -0.01),
+        y: -20 + (mouse.y * -0.01) 
       };
 
   $(self).css({
@@ -259,7 +312,8 @@ $(document).ready(function(){
   $('#main-footer .social').append('<li><a href="' + four + 'to:'+one+three+two+'.ca" title="Email Secret Handshake">Email</a></li>');
 
   // Create new instance of testimonials
-  var t = new Testimonials(6000, 400);
+  new Testimonials(8000, 400);
+  new Slideshow(6000);
 });
 
 $(window).on("mousemove", function() {

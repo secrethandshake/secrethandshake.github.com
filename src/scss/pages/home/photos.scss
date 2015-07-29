@@ -1,15 +1,56 @@
 #photos {
   .inner {
+    height: 450px;
     padding: 0;
+    position: relative;
+    overflow: hidden;
   }
 
   .section-title {
     color: color(yellow);
   }
 
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
+  ul#images {
+    height: 100%;
+    list-style: none;
+    position: relative;
+
+    li {
+      height: 100%;
+      display: inline;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 2s;
+
+      &.current {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      img {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  #photos {
+    .inner {
+      height: 650px;
+    }
+
+    ul#images {
+      li {
+        img {
+          outline: 1px solid red;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
   }
 }
