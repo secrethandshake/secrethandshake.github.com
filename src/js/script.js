@@ -312,7 +312,7 @@ $(document).ready(function(){
   $('#main-footer .social').append('<li><a href="' + four + 'to:'+one+three+two+'.ca" title="Email Secret Handshake">Email</a></li>');
 
   // Create new instance of testimonials
-  new Testimonials(8000, 400);
+  //new Testimonials(8000, 400);
   new Slideshow(6000);
 });
 

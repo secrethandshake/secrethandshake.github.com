@@ -18,9 +18,22 @@
     .author {
       margin-top: ws(medium);
 
-      .title {
-        font-style: italic;
-        color: rgba(color(black), 0.4);
+      .avatar {
+        width: 80px;
+        height: 80px;
+        float: left;
+        margin-right: ws(small);
+      }
+
+      .name {
+        clear: right;
+      }
+
+      .handle {
+        font: font(medium);
+        color: color(grey);
+        clear: right;
+        display: block;
       }
     }
   }
@@ -36,6 +49,20 @@
 
     blockquote {
       text-align: center;
+
+      .author {
+        text-align: left;
+        display: inline-block;
+
+        .avatar {
+          width: 60px;
+          height: 60px;
+        }
+
+        .name {
+          float: left;
+        }
+      }
     }
   }
 }
