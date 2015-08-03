@@ -19,9 +19,26 @@
   form {
     margin-top: ws(large);
 
-    .error {
-      display: inline-block;
+    .message {
+      display: none;
       margin-top: ws(small);
+
+      &.visible {
+        display: inline-block;
+      } 
+
+      &:before {
+        content: "";
+        float: left;
+        display: inline-block;
+        background-image: url(../images/warning.svg);
+        background-size: 24px;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        margin-top: 7px;
+        margin-right: ws(small);
+      }
     }
 
     input {

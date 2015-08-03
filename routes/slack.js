@@ -17,7 +17,7 @@ router.post('/invite', function(req, res) {
           set_active: true
         }
       }, function(err, httpResponse, body) {
-        if (err) return res.send('Error:' + err);
+        if (err) return res.send(err);
 
         body = JSON.parse(body);
 
@@ -30,7 +30,7 @@ router.post('/invite', function(req, res) {
         }
       });
   } else {
-    res.status(400).send('email is required.');
+    res.status(400).send('Email is required.');
   }
 });
 

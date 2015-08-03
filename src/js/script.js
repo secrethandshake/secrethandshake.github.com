@@ -307,6 +307,29 @@ $(document).ready(function(){
     $('.photos-bg').css("left", "" + sl + "px");
   });
 
+  $('#slack form').on('submit', function(e) {
+    e.preventDefault();
+
+    var self = this;
+
+    $.ajax({
+      url: '/invite',
+      type: 'post',
+      data: {
+        email: $(self).find('[name="email"]').val()
+      },
+      success: function(data) {
+        console.log("success");
+        console.log(data);
+        $(self).find('.message').addClass('visible').text(data);
+      },
+      error: function(data) {
+        console.log("failure");
+        $(self).find('.message').addClass('visible').text(data.responseText);
+      }
+    });
+  });
+
   var one = "hello", two = "secrethandshake", three = "@", four = "mail";
   // $('#goodwork .next .col12').append('<a class="button button-signup" href="' + four + 'to:'+one+three+two+'.ca" title="Sign Up Now">Sign Up Now</a>');
   $('#main-footer .social').append('<li><a href="' + four + 'to:'+one+three+two+'.ca" title="Email Secret Handshake">Email</a></li>');

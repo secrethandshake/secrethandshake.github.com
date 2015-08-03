@@ -3,7 +3,7 @@
 
   .inner {
     background: color(yellow);
-    height: 345px;
+    //height: 345px;
   }
 
   blockquote {
@@ -12,28 +12,26 @@
     z-index: 2;
 
     .quote {
-      font-style: italic;
+      //font-style: italic;
     }
 
     .author {
-      margin-top: ws(medium);
+      margin-top: ws(small);
 
-      .avatar {
-        width: 80px;
-        height: 80px;
-        float: left;
-        margin-right: ws(small);
+      &:before {
+        content: "\2013";
+        display: block;
       }
 
       .name {
-        clear: right;
+        //clear: both;
       }
 
       .handle {
         font: font(medium);
-        color: color(grey);
-        clear: right;
-        display: block;
+        color: darken(color(yellow), 25%);
+        float: left;
+        clear: both;
       }
     }
   }
@@ -44,15 +42,16 @@
     background: none;
 
     .inner {
-      height: 345px;
+      //height: 345px;
     }
 
     blockquote {
-      text-align: center;
+      //text-align: center;
 
       .author {
         text-align: left;
         display: inline-block;
+        //margin-left: ws(medium);
 
         .avatar {
           width: 60px;
