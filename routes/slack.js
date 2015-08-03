@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var validator = require('email-validator');
 var config = require('../slackConfig');
 
 router.get('/', function(req, res) {
@@ -8,11 +9,14 @@ router.get('/', function(req, res) {
 });
 
 router.post('/invite', function(req, res) {
-  if (req.body.email) {
-    request.post({
+  var email = req.body.email.trim();
+
+  if (email) {
+    if (validator.validate(email)) {
+      request.post({
         url: 'https://'+ config.slackUrl + '/api/users.admin.invite',
         form: {
-          email: req.body.email,
+          email: email,
           token: config.slacktoken,
           set_active: true
         }
@@ -21,14 +25,18 @@ router.post('/invite', function(req, res) {
 
         body = JSON.parse(body);
 
+        console.log('>' + email + '<');
         console.log(body);
         
         if (body.ok) {
-          res.send('Success! Check "'+ req.body.email +'" for an invite from Slack.');
+          res.send('Invitation sent to ' + email);
         } else {
           res.send('Failed! ' + body.error);
         }
       });
+    } else {
+      res.status(400).send('Invalid email.');
+    } 
   } else {
     res.status(400).send('Email is required.');
   }
