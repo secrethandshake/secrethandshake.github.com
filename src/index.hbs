@@ -1,5 +1,18 @@
 {{> header title='home'}}
 
+<svg class="hidden-svg">
+  <defs>
+    <pattern id="wave-pattern" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="translate(0,-40)">
+      <circle cx="0" cy="0" r="6" stroke="white" stroke-width="3" fill="transparent" />
+      <circle cx="12" cy="24" r="6" stroke="white" stroke-width="3" fill="transparent" />
+      <circle cx="24" cy="0" r="6" stroke="white" stroke-width="3" fill="transparent" />
+    </pattern>
+
+    <pattern id="stripe-pattern" width="10" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="2" height="3" fill="white" />
+    </pattern>
+  </defs>
+</svg>
 
 <section id="hero">
   <div class="inner">
@@ -7,16 +20,10 @@
       <div class="nine columns offset-by-one">
         <h1>Secret Handshake</h1>
         <svg id="hero-stripes" class="stripes">
-          <defs>
-            <pattern id="hero-pattern" width="10" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-              <rect width="2" height="3" fill="white">
-            </pattern>
-            <mask id="hero-mask">
-              <rect x="0" y="0" width="100%" height="100%" fill="url(#hero-pattern)">
-            </mask>      
-          </defs>
-
           <rect class="shape" x="0" y="0" width="100%" height="100%"></rect>
+          <mask id="hero-mask">
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#stripe-pattern)">
+          </mask>
         </svg>
       </div>
       <div class="three columns offset-by-nine"><img src="images/logo-dark.svg"></div>
@@ -44,6 +51,12 @@
 
 <section id="organizers" class="sec">
   <div class="inner">
+    <svg class="back">
+      <rect class="shape" fill="url(#wave-pattern)" x="0" y="0" width="100%" height="100%"></rect>
+      <mask id="organizers-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#wave-pattern)">
+      </mask>
+    </svg>
     <h2 class="section-title">Organizers</h2>
     <div class="row">
       <div class="six columns person">
@@ -78,6 +91,9 @@
 
 <section id="testimonials" class="sec">
   <div class="inner">
+    <svg class="back">
+      <rect class="shape" fill="url(#wave-pattern)" x="0" y="0" width="100%" height="100%"></rect>
+    </svg>
     <h2 class="section-title">Testimonials</h2>
     <div class="row">
       <div class="six columns">
@@ -104,14 +120,12 @@
 
 <section id="next-meetup" class="sec">
   <div class="inner">
+    <svg class="back">
+      <rect class="shape" fill="url(#wave-pattern)" x="0" y="0" width="100%" height="100%"></rect>
+    </svg>
     <h2 class="section-title">Upcoming</h2>
     <div class="row">
-      <div class="eight columns center meetup">
-        <h3>Secret Handshake #62</h3>
-        <div class="date">5:30 PM – Thursday, August 20th, 2015</div>
-        <div class="location">The Good Will - Social Club, 625 Portage</div>
-        <a href="#" class="sign-up btn btn-chevron">Sign up now</a>
-      </div>
+      <div class="eight columns center meetup"></div>
     </div>
   </div>
 </section>
@@ -129,16 +143,10 @@
       </form>
 
       <svg class="stripes">
-        <defs>
-          <pattern id="slack-pattern" width="10" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-            <rect width="2" height="3" fill="white">
-          </pattern>
-          <mask id="slack-mask">
-            <rect x="0" y="0" width="100%" height="100%" fill="url(#slack-pattern)">
-          </mask>
-        </defs>
-
         <rect class="shape" x="0" y="0" width="100%" height="100%"></rect>
+        <mask id="slack-mask">
+          <rect x="0" y="0" width="100%" height="100%" fill="url(#stripe-pattern)">
+        </mask>
       </svg>
     </div>
   </div>

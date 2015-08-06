@@ -78,20 +78,48 @@ h3 {
   }
 }
 
+.hidden-svg {
+  height: 0;
+  float: left;
+}
+
 .sec {
   &:not(:first-of-type) {
     margin-top: ws(xxx-large);
+  }
+  
+  &:nth-of-type(even) {
+    .inner {
+      svg.back {
+        fill:
+      }
+    }
   }
 
   .inner {
     padding: ws(x-large) ws(medium);
     background: color(light);
+
+    svg.back {
+      position: absolute;
+      top: - ws(x-large);
+      left: - ws(medium);
+      z-index: -1;
+      width: 33%;
+      height: 240px;
+
+      .shape {
+        fill: color(yellow);
+        mask: url(/#organizers-mask);
+      }
+    }
   }
 
   .section-title {
     text-align: center;
     left: 0;
     right: 0;
+    color: color(black);
     position: absolute;
     top: - ws(x-medium);
     z-index: 9;

@@ -1,9 +1,16 @@
 #testimonials {
-  //background: color(yellow);
-
   .inner {
     background: color(yellow);
-    //height: 345px;
+  }
+
+  .section-title {
+    color: color(black);
+  }
+
+  svg.back {
+    .shape {
+      fill: color(light);
+    }
   }
 
   blockquote {
@@ -11,20 +18,12 @@
     position: relative;
     z-index: 2;
 
-    .quote {
-      //font-style: italic;
-    }
-
     .author {
       margin-top: ws(small);
 
       &:before {
         content: "\2013";
         display: block;
-      }
-
-      .name {
-        //clear: both;
       }
 
       .handle {
