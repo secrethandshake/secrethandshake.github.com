@@ -337,6 +337,11 @@ $(document).ready(function(){
   // Create new instance of testimonials
   //new Testimonials(8000, 400);
   new Slideshow(6000);
+
+  if ($(window).width() <= 750) {
+    $('#organizers .cta').find('span').text('');
+    $('#organizers .cta').find('.email').text('Email us');
+  }
 });
 
 $(window).on("mousemove", function() {

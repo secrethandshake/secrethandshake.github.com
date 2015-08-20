@@ -105,8 +105,8 @@ h3 {
       top: - ws(x-large);
       left: - ws(medium);
       z-index: -1;
-      width: 33%;
-      height: 240px;
+      width: 50%;
+      height: 140px;
 
       .shape {
         fill: color(yellow);
@@ -143,6 +143,11 @@ h3 {
     .inner {
       padding: ws(xxx-large) ws(large) ws(xx-large) ws(large);
       background: color(light);
+
+      svg.back {
+        width: 33%;
+        height: 240px;
+      }
     }
 
     .section-title {
