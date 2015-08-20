@@ -3,7 +3,13 @@
     margin-top: ws(xx-large); 
   }
 
+  .cta {
+    text-align: center;
+  }
+
   .person {
+    text-align: center;
+
     &:not(:first-of-type) {
       margin-top: ws(xx-large);
     }
@@ -62,8 +68,6 @@
       .headshot {
         width: 180px;
         height: auto;
-        float: left;
-        margin-right: ws(medium);
       }
 
       .name {
