@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var request = require('request');
 var validator = require('email-validator');
-var config = require('../slackConfig');
+var config = require('./slackConfig');
 
 router.get('/', function(req, res) {
   res.render('index');
