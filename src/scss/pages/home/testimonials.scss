@@ -1,16 +1,6 @@
 #testimonials {
-  .inner {
-    background: color(yellow);
-  }
-
   .section-title {
     color: color(black);
-  }
-
-  svg.back {
-    .shape {
-      fill: color(light);
-    }
   }
 
   blockquote {
@@ -45,7 +35,7 @@
     }
 
     blockquote {
-      //text-align: center;
+      text-align: center;
 
       .author {
         text-align: left;

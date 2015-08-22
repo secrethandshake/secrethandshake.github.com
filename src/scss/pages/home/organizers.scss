@@ -3,6 +3,16 @@
     margin-top: ws(xx-large); 
   }
 
+  .inner {
+    background: color(yellow);
+  }
+
+  svg.back {
+    .shape {
+      fill: color(light);
+    }
+  }
+
   .cta {
     text-align: center;
 
@@ -30,7 +40,7 @@
 
     .handle {
       font: font(medium);
-      color: color(grey);
+      color: darken(color(yellow), 25%);
     }
 
     .bio {
