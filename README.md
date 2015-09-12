@@ -24,12 +24,6 @@ Install all dependencies using npm:
 npm install
 ```
 
-Run the start command (make sure you run this before `gulp`, otherwise you will run into errors):
-
-```sh
-npm start
-```
-
 Run the default Gulp task to get started:
 
 ```sh

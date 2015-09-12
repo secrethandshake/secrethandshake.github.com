@@ -318,13 +318,13 @@ $(document).ready(function(){
       data: {
         email: $(self).find('[name="email"]').val()
       },
+      beforeSend: function() {
+        $(self).find('.message').addClass('visible').text('Sending invite...');
+      },
       success: function(data) {
-        console.log("success");
-        console.log(data);
-        $(self).find('.message').addClass('visible').text(data);
+        $(self).find('.message').text(data);
       },
       error: function(data) {
-        console.log("failure");
         $(self).find('.message').addClass('visible').text(data.responseText);
       }
     });

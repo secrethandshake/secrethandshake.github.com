@@ -3,6 +3,7 @@ var router = express.Router();
 var request = require('request');
 var validator = require('email-validator');
 var config = require('./slackConfig');
+var sleep = require('sleep');
 
 router.get('/', function(req, res) {
   res.render('index');
@@ -13,6 +14,10 @@ router.post('/invite', function(req, res) {
 
   if (email) {
     if (validator.validate(email)) {
+      console.log('sleeping');
+      // Sleep for 1 sec, to avoid spam
+      sleep.sleep(1);
+
       request.post({
         url: 'https://'+ config.slackUrl + '/api/users.admin.invite',
         form: {

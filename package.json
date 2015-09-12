@@ -26,6 +26,7 @@
     "ejs": "^2.3.3",
     "email-validator": "^1.0.2",
     "express": "^4.13.1",
-    "request": "^2.60.0"
+    "request": "^2.60.0",
+    "sleep": "^3.0.0"
   }
 }
