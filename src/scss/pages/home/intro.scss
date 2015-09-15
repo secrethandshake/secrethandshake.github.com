@@ -1,0 +1,31 @@
+#intro {
+  margin-top: 0;
+
+  .inner {
+    padding-top: ws(x-large);
+  }
+}
+
+@media (min-width: 750px) {
+  #intro {
+    text-align: center;
+    margin-top: - ws(xx-large);
+    position: relative;
+    z-index: -4;
+
+    .inner {
+      border-top: ws(xx-large) solid color(light);
+      padding-top: ws(xx-large);
+    }
+
+    span {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  #intro {
+    text-align: center;
+  }
+}

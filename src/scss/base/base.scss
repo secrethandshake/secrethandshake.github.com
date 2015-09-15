@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  //outline: 1px dashed rgba(black, 0.1);
+}
+
+::selection {
+  background: color(black);
+  color: color(white);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font: font(default);
+
+  color: color(black);
+  background: color(white);}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold !important;
+}
+
+h1 {
+  font: font(large);
+}
+
+h2 {
+  font: font(large);
+}
+
+h3 {
+  font: font(x-medium);
+}
+
+// For tablets
+@media (min-width: 750px) {
+  h1 {
+    font: font(x-large);
+  }
+}
+
+// For larger screens
+@media (min-width: 1000px) {
+  h1 {
+    font: font(xx-large);
+  }
+
+  h2 {
+    font: font(x-large);
+  }
+
+  h3 {
+    font: font(large);
+  }
+}
+
+.cf {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.hidden-svg {
+  height: 0;
+  float: left;
+}
+
+.sec {
+  &:not(:first-of-type) {
+    margin-top: ws(xxx-large);
+  }
+  
+  &:nth-of-type(even) {
+    .inner {
+      svg.back {
+        fill:
+      }
+    }
+  }
+
+  .inner {
+    padding: ws(x-large) ws(medium);
+    background: color(light);
+
+    svg.back {
+      position: absolute;
+      top: - ws(x-large);
+      left: - ws(medium);
+      z-index: -1;
+      width: 50%;
+      height: 140px;
+
+      .shape {
+        fill: color(yellow);
+        mask: url(../#organizers-mask);
+      }
+    }
+  }
+
+  .section-title {
+    text-align: center;
+    left: 0;
+    right: 0;
+    color: color(black);
+    position: absolute;
+    top: - ws(x-medium);
+    z-index: 9;
+  }
+
+  @media (min-width: 750px) {
+    .inner {
+      padding: ws(xxx-large) ws(small) ws(xx-large) ws(small);
+    }
+  }
+
+  @media (min-width: 1000px) {
+    & {
+      background: none;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: ws(xxxx-large);
+    }
+
+    .inner {
+      padding: ws(xxx-large) ws(large) ws(xx-large) ws(large);
+      background: color(light);
+
+      svg.back {
+        width: 33%;
+        height: 240px;
+      }
+    }
+
+    .section-title {
+      top: - ws(large);
+      text-align: left;
+      margin-left: ws(large);
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  background: none;
+  padding: ws(x-small) ws(medium);
+  border: 2px solid color(black);
+  border-radius: 4px;
+  transition: background 0.1s;
+  
+  &:hover {
+    background: rgba(color(black), 0.1);
+  }
+
+  &.btn-chevron {
+    position: relative;
+    padding-right: ws(large);
+
+    &:after {
+      content: "";
+      background: url(../images/chevron-right.svg);
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      margin-left: ws(x-small) + 0.3rem;
+      display: inline-block;
+      position: absolute;
+      height: 16px;
+      width: 10px;
+      top: ws(small) + 0.1rem;
+    }
+  }
+}

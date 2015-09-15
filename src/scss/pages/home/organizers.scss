@@ -1,0 +1,106 @@
+#organizers {
+  .row:nth-of-type(2) {
+    margin-top: ws(xx-large); 
+  }
+
+  .inner {
+    background: color(yellow);
+  }
+
+  svg.back {
+    .shape {
+      fill: color(light);
+    }
+  }
+
+  .cta {
+    text-align: left;
+
+    .email {
+      text-decoration: underline;
+    }
+
+    div {
+      display: inline-block;
+    }
+  }
+
+  .person {
+    text-align: left;
+    width: 100%;
+    margin-left: 0;
+
+    .headshot {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .name {
+      margin-top: ws(small);
+    }
+
+    .handle {
+      font: font(medium);
+      color: darken(color(yellow), 25%);
+    }
+
+    .bio {
+      margin-top: ws(small);
+      font: font(medium);
+    }
+  }  
+}
+
+@media (min-width: 600px) {
+  #organizers {
+    .person {
+      width: 48%;
+      margin-left: 0;
+      margin-top: 0;
+
+      &:nth-of-type(n+3) {
+        margin-top: ws(large);
+      }
+
+      &:not(:nth-of-type(2n+1)) {
+        margin-left: 4%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  #organizers {
+    .row:nth-of-type(2) {
+      margin-top: ws(xx-large); 
+    }
+
+    .person {
+      width: 22%;
+      text-align: center;
+      margin-top: 0 !important;
+
+      &:not(:first-of-type) {
+        margin-left: 4% !important;
+      }
+
+      .headshot {
+        width: 180px;
+        height: auto;
+      }
+
+      .name {
+        margin-top: 0;
+      }
+    }
+
+    .cta {
+      text-align: center;
+
+      div {
+        display: block;
+      }
+    }  
+  }
+}

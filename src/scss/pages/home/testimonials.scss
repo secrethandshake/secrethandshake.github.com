@@ -1,0 +1,56 @@
+#testimonials {
+  .section-title {
+    color: color(black);
+  }
+
+  blockquote {
+    text-align: left;
+    position: relative;
+    z-index: 2;
+
+    .author {
+      margin-top: ws(small);
+
+      &:before {
+        content: "\2013";
+        display: block;
+      }
+
+      .handle {
+        font: font(medium);
+        color: darken(color(yellow), 25%);
+        float: left;
+        clear: both;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  #testimonials {
+    background: none;
+
+    .inner {
+      //height: 345px;
+    }
+
+    blockquote {
+      text-align: center;
+
+      .author {
+        text-align: left;
+        display: inline-block;
+        //margin-left: ws(medium);
+
+        .avatar {
+          width: 60px;
+          height: 60px;
+        }
+
+        .name {
+          float: left;
+        }
+      }
+    }
+  }
+}

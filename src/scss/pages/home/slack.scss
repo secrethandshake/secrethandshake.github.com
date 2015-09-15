@@ -1,0 +1,129 @@
+#slack {
+  //background: color(yellow);
+
+  .inner {
+    background: none;
+    padding: none !important;
+  }
+
+  .seven.columns {
+    background: color(yellow);
+    padding: ws(x-large) ws(medium);
+    display: block;
+
+    .stripes {
+      display: none;
+    }
+  }
+
+  form {
+    margin-top: ws(large);
+
+    .message {
+      display: none;
+      margin-top: ws(small);
+
+      &.visible {
+        display: inline-block;
+      } 
+
+      &:before {
+        content: "";
+        float: left;
+        display: inline-block;
+        background-image: url(../images/warning.svg);
+        background-size: 24px;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        margin-top: 7px;
+        margin-right: ws(small);
+      }
+    }
+
+    input {
+      font: font(default);
+      padding: ws(xx-small) ws(x-small);
+      outline: none;
+      border-radius: 3px;
+      border: 2px solid darken(color(yellow), 20%);
+      background: none;
+      box-shadow: inset 0 0 5px rgba(color(black), 0.1);
+      -webkit-appearance: none;
+      transition: background 0.1s;
+
+      &:hover,
+      &:focus {
+        background: rgba(color(black), 0.05);
+      }
+
+      &::-webkit-input-placeholder {
+        color: rgba(color(black), 0.3);
+      }
+
+      &:-moz-placeholder {
+        color: rgba(color(black), 0.3); 
+      }
+
+      &::-moz-placeholder {
+        color: rgba(color(black), 0.3);
+      }
+
+      &:-ms-input-placeholder {  
+        color: rgba(color(black), 0.3);
+      }
+
+      &[type=submit] {
+        cursor: pointer;
+        background: color(black);
+        color: color(yellow);
+        border-color: color(black);
+        margin-top: ws(medium);
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  #slack {
+    background: none;
+    position: relative;
+    margin-top: - ws(xx-large);
+    z-index: 9;
+    
+    .inner {
+      text-align: left;
+    }
+
+    .seven.columns {
+      position: relative;
+      padding: ws(medium);
+
+      .stripes {
+        display: block;
+        position: absolute;
+        transform: translate3d(ws(small), - ws(small), 0);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        .shape {
+          fill: color(black);
+          mask: url(../#slack-mask);
+        }
+      }
+
+      form {
+        margin-top: ws(medium);
+        
+        input {
+          &[type=submit] {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

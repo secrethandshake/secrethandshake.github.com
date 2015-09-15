@@ -1,0 +1,65 @@
+#hero {
+  .inner {
+    background: color(yellow);
+    padding: ws(medium);
+  }
+
+  .nine.columns {
+    background: color(yellow);
+    position: relative;
+
+    #hero-stripes {
+      display: none;
+    }
+  }
+
+  .three.columns {
+    display: none;
+  }
+}
+
+@media (min-width: 750px) {
+  #hero {
+    margin-top: ws(x-large);
+
+    .inner {
+      padding: 0;
+      background: none;
+    }
+    
+    .nine.columns {
+      padding: ws(medium);
+
+      #hero-stripes {
+        display: block;
+        position: absolute;
+        transform: translate3d(- ws(small), - ws(small), 0);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        box-sizing: border-box;
+
+        .shape {
+          fill: color(black);
+          mask: url(../#hero-mask);
+        }
+      }
+    }
+
+    .three.columns {
+      display: block;
+      position: absolute;
+      opacity: 0.1;
+      margin-top: ws(xxx-large);
+      z-index: -2;
+
+      img {
+        width: 100%;
+        height: auto;
+        transform: rotate(12deg);
+      }
+    }
+  }
+}

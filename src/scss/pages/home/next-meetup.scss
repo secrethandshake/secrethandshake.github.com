@@ -1,0 +1,23 @@
+#next-meetup {
+  .inner {
+    text-align: left;
+  }
+
+  .meetup-deets {
+    margin-top: ws(large);
+  }
+
+  .sign-up {
+    display: inline-block;
+    margin-top: ws(large);
+  }
+}
+
+@media (min-width: 750px) {
+  #next-meetup {
+    .inner {
+      text-align: center;
+      border-bottom: ws(xx-large) solid color(light);
+    }
+  }  
+}

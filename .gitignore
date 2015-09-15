@@ -1,1 +1,13 @@
-.sass-cache/*
+.DS_Store
+node_modules/*
+npm-debug.log
+
+.publish
+*.log
+
+*.hbs
+partials/*
+!src/**/*.hbs
+assets/*
+
+slackConfig.js
